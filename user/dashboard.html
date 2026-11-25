@@ -3,44 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Dashboard | E-Shop</title>
+  <meta name="theme-color" content="#29362c">
+  <title>Discover | Atelier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-  <nav class="navbar dashboard-nav">
-    <a class="brand" href="dashboard.html">E-Shop</a>
+<body class="atelier-dashboard">
+  <div class="atelier-announcement"><span>GOOD FINDS, GOOD FEELS</span><span>FREE SHIPPING ON ORDERS OVER ₹1,499</span></div>
+  <nav class="navbar dashboard-nav atelier-dashboard-nav">
+    <a class="brand" href="dashboard.html">atelier<span>.</span></a>
     <div class="nav-links">
-      <a class="active" href="dashboard.html">Products</a>
-      <a href="cart.html">Cart <span id="cartCount" class="badge">0</span></a>
-      <a href="orders.html">Orders</a>
-      <a href="profile.html">Profile</a>
-      <button id="logoutBtn" class="btn btn-danger small">Logout</button>
+      <a class="active" href="dashboard.html">Discover</a>
+      <a href="#productGrid">Shop</a>
+      <a href="orders.html">Your orders</a>
+      <a href="profile.html">Account</a>
+      <a href="cart.html" class="atelier-cart-link">Bag <span id="cartCount" class="badge">0</span></a>
+      <button id="logoutBtn" class="btn btn-danger small">Sign out</button>
     </div>
   </nav>
 
-  <main class="container page">
-    <section class="welcome-banner">
-      <div>
-        <p class="eyebrow">USER MODULE</p>
-        <h1>Welcome, <span id="userName">User</span> 👋</h1>
-        <p>Find products and add them to your shopping cart.</p>
+  <main class="atelier-dashboard-main">
+    <section class="atelier-dashboard-hero">
+      <div class="atelier-dashboard-hero-copy">
+        <p class="atelier-kicker">YOUR EVERYDAY EDIT · 2026</p>
+        <h1>Good things.<br><em>Better</em> living.</h1>
+        <p class="atelier-welcome">Welcome back, <strong id="userName">there</strong>. Your next favourite find is waiting.</p>
+        <p class="atelier-hero-description">Explore thoughtful everyday pieces, useful little upgrades and feel-good finds — all picked to make your day a little better.</p>
+        <a class="atelier-dark-button" href="#productGrid">Explore the collection <span>↗</span></a>
+        <p class="atelier-hand-note">Thoughtfully picked, never ordinary.</p>
       </div>
-      <div class="welcome-icon">🛒</div>
+      <div class="atelier-dashboard-hero-art" aria-label="Curated shopping collection">
+        <div class="atelier-orbit atelier-orbit-one"></div><div class="atelier-orbit atelier-orbit-two"></div>
+        <div class="atelier-art-card atelier-art-card-back"><span>THE EVERYDAY EDIT</span><b>GOOD FINDS<br>FOR GOOD DAYS</b></div>
+        <div class="atelier-art-card atelier-art-card-front">
+          <div class="atelier-art-photo"></div>
+          <div class="atelier-art-caption"><span>CURATED WITH CARE</span><strong>Find your<br>new favourite.</strong></div>
+        </div>
+        <div class="atelier-art-stamp">A LITTLE<br>EXTRA<br>GOODNESS</div>
+        <span class="atelier-art-arrow">↙</span>
+      </div>
     </section>
 
-    <section class="toolbar">
-      <input id="searchInput" class="search-input" type="search" placeholder="Search products...">
-      <select id="categoryFilter">
-        <option value="All">All Categories</option>
-        <option value="Electronics">Electronics</option>
-        <option value="Fashion">Fashion</option>
-        <option value="Books">Books</option>
-        <option value="Home">Home</option>
-      </select>
+    <section class="atelier-benefits" aria-label="Shopping benefits">
+      <div><span class="benefit-mark">01</span><p><strong>Free shipping</strong><small>On orders ₹1,499+</small></p></div>
+      <div><span class="benefit-mark">02</span><p><strong>Easy returns</strong><small>7-day return window</small></p></div>
+      <div><span class="benefit-mark">03</span><p><strong>Secure checkout</strong><small>Safe, simple payments</small></p></div>
+      <div><span class="benefit-mark">04</span><p><strong>Here to help</strong><small>Friendly support, always</small></p></div>
     </section>
 
-    <div id="productGrid" class="product-grid"></div>
+    <section class="atelier-catalogue-section">
+      <div class="atelier-section-heading">
+        <div><p class="atelier-kicker">A GOOD PLACE TO START</p><h2>Find your <em>kind</em> of good.</h2></div>
+        <p>Little discoveries, big favourites.<br>Take a look around.</p>
+      </div>
+      <div class="atelier-toolbar">
+        <label class="atelier-search"><span>⌕</span><input id="searchInput" class="search-input" type="search" placeholder="Search your next favourite..." aria-label="Search products"></label>
+        <select id="categoryFilter" aria-label="Filter by category">
+          <option value="All">All categories</option><option value="Electronics">Tech & gadgets</option><option value="Fashion">Fashion</option><option value="Books">Books & more</option><option value="Home">Home & living</option>
+        </select>
+      </div>
+      <div class="atelier-results-line"><span>THE ATELIER EDIT</span><span>GOOD THINGS, SELECTED FOR YOU</span></div>
+      <div id="productGrid" class="product-grid atelier-product-grid"></div>
+    </section>
+    <section class="atelier-bottom-note"><p>NOT JUST ANOTHER STORE</p><h2>Less scrolling. <em>More falling in love.</em></h2><span>Good finds for every day, thoughtfully brought together.</span></section>
   </main>
+  <footer class="atelier-dashboard-footer"><a class="brand" href="dashboard.html">atelier<span>.</span></a><span>Thoughtfully picked, never ordinary.</span><span>© 2026 Atelier</span></footer>
 
   <script src="../js/storage.js"></script>
   <script src="../js/products.js"></script>
