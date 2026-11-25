@@ -34,3 +34,11 @@
 .auth-secure-note span{color:#e87551;font-size:13px;margin-right:5px}.auth-mobile-footer{display:none;text-align:center;font-size:7px;letter-spacing:1.3px;color:#969487;padding:12px}
 @media(max-width:850px){.atelier-auth-page{padding:0}.auth-shell{min-height:100vh;grid-template-columns:.85fr 1fr}.auth-art-panel{padding:30px 7%;min-height:100vh}.auth-art-copy h1{font-size:clamp(43px,6vw,62px)}.auth-bag-art,.auth-cart-art{width:130px}.auth-form-side{padding:60px 7% 30px}.auth-form-top{right:7%}}
 @media(max-width:620px){.auth-shell{display:block;min-height:100vh;border:0}.auth-art-panel{min-height:245px;padding:19px 7%;justify-content:flex-start}.auth-art-brand{font-size:27px}.auth-art-copy{margin-top:24px}.auth-art-kicker{font-size:7px}.auth-art-copy h1{font-size:38px;line-height:.98;margin:8px 0}.auth-art-copy>p:not(.auth-art-kicker){font-size:9px;line-height:1.5}.auth-back-link{margin-top:12px;font-size:7px}.auth-art-footer{display:none}.auth-bag-art{width:90px;right:8%;bottom:4%}.auth-cart-art{width:95px;right:5%;top:42%}.doodle-star{right:10%;top:12%;font-size:26px}.doodle-spark{right:8%;top:64%;font-size:30px}.doodle-heart{left:auto;right:31%;bottom:8%;font-size:27px}.doodle-note{display:none}.doodle-circle{width:55px;height:55px;right:31%;top:15%;font-size:6px}.auth-form-side{padding:38px 7% 15px}.auth-form-top{top:14px;right:7%;font-size:6px}.atelier-auth-card{padding:10px 0 22px}.atelier-auth-card .brand{font-size:27px;margin-bottom:12px}.atelier-auth-card h2{font-size:32px}.atelier-auth-card>.muted{font-size:9px;margin-bottom:16px}.atelier-auth-card input{height:43px}.atelier-auth-card label{margin-top:5px}.auth-secure-note{margin-top:16px;padding-top:12px}.auth-mobile-footer{display:block}}
+
+/* Login page refinements — preserve the same Atelier signup visual system */
+.atelier-login-card>.muted{margin-bottom:20px}
+.atelier-demo-box{margin-top:18px;background:#f0f2e9;border:1px dashed #b9c3ad;border-radius:4px;padding:12px 14px;color:#59634f;font-size:9px}
+.atelier-demo-box strong{display:block;font-size:9px;color:#59634f;margin-bottom:5px}
+.atelier-demo-box p{font-size:9px;color:#73796b;line-height:1.6}
+.atelier-login-card .auth-bottom{margin-top:15px}
+@media(max-width:620px){.atelier-demo-box{margin-top:13px;padding:10px 12px}.atelier-login-card>.muted{margin-bottom:14px}}
