@@ -1,78 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#29362c">
-  <title>Discover | Atelier</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#29362c"><meta name="description" content="Discover thoughtful everyday finds at Atelier."><title>Discover | Atelier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../css/style.css?v=atelier-home-v4">
 </head>
 <body class="atelier-dashboard">
-  <div class="atelier-announcement"><span>GOOD FINDS, GOOD FEELS</span><span>FREE SHIPPING ON ORDERS OVER ₹1,499</span></div>
-  <nav class="navbar dashboard-nav atelier-dashboard-nav">
-    <a class="brand" href="dashboard.html">atelier<span>.</span></a>
-    <div class="nav-links">
-      <a class="active" href="dashboard.html">Discover</a>
-      <a href="#productGrid">Shop</a>
-      <a href="orders.html">Your orders</a>
-      <a href="profile.html">Account</a>
-      <a href="cart.html" class="atelier-cart-link">Bag <span id="cartCount" class="badge">0</span></a>
-      <button id="logoutBtn" class="btn btn-danger small">Sign out</button>
-    </div>
-  </nav>
-
-  <main class="atelier-dashboard-main">
-    <section class="atelier-dashboard-hero">
-      <div class="atelier-dashboard-hero-copy">
-        <p class="atelier-kicker">YOUR EVERYDAY EDIT · 2026</p>
-        <h1>Good things.<br><em>Better</em> living.</h1>
-        <p class="atelier-welcome">Welcome back, <strong id="userName">there</strong>. Your next favourite find is waiting.</p>
-        <p class="atelier-hero-description">Explore thoughtful everyday pieces, useful little upgrades and feel-good finds — all picked to make your day a little better.</p>
-        <a class="atelier-dark-button" href="#productGrid">Explore the collection <span>↗</span></a>
-        <p class="atelier-hand-note">Thoughtfully picked, never ordinary.</p>
-      </div>
-      <div class="atelier-dashboard-hero-art" aria-label="Curated shopping collection">
-        <div class="atelier-orbit atelier-orbit-one"></div><div class="atelier-orbit atelier-orbit-two"></div>
-        <div class="atelier-art-card atelier-art-card-back"><span>THE EVERYDAY EDIT</span><b>GOOD FINDS<br>FOR GOOD DAYS</b></div>
-        <div class="atelier-art-card atelier-art-card-front">
-          <div class="atelier-art-photo"></div>
-          <div class="atelier-art-caption"><span>CURATED WITH CARE</span><strong>Find your<br>new favourite.</strong></div>
-        </div>
-        <div class="atelier-art-stamp">A LITTLE<br>EXTRA<br>GOODNESS</div>
-        <span class="atelier-art-arrow">↙</span>
-      </div>
-    </section>
-
-    <section class="atelier-benefits" aria-label="Shopping benefits">
-      <div><span class="benefit-mark">01</span><p><strong>Free shipping</strong><small>On orders ₹1,499+</small></p></div>
-      <div><span class="benefit-mark">02</span><p><strong>Easy returns</strong><small>7-day return window</small></p></div>
-      <div><span class="benefit-mark">03</span><p><strong>Secure checkout</strong><small>Safe, simple payments</small></p></div>
-      <div><span class="benefit-mark">04</span><p><strong>Here to help</strong><small>Friendly support, always</small></p></div>
-    </section>
-
-    <section class="atelier-catalogue-section">
-      <div class="atelier-section-heading">
-        <div><p class="atelier-kicker">A GOOD PLACE TO START</p><h2>Find your <em>kind</em> of good.</h2></div>
-        <p>Little discoveries, big favourites.<br>Take a look around.</p>
-      </div>
-      <div class="atelier-toolbar">
-        <label class="atelier-search"><span>⌕</span><input id="searchInput" class="search-input" type="search" placeholder="Search your next favourite..." aria-label="Search products"></label>
-        <select id="categoryFilter" aria-label="Filter by category">
-          <option value="All">All categories</option><option value="Electronics">Tech & gadgets</option><option value="Fashion">Fashion</option><option value="Books">Books & more</option><option value="Home">Home & living</option>
-        </select>
-      </div>
-      <div class="atelier-results-line"><span>THE ATELIER EDIT</span><span>GOOD THINGS, SELECTED FOR YOU</span></div>
-      <div id="productGrid" class="product-grid atelier-product-grid"></div>
-    </section>
-    <section class="atelier-bottom-note"><p>NOT JUST ANOTHER STORE</p><h2>Less scrolling. <em>More falling in love.</em></h2><span>Good finds for every day, thoughtfully brought together.</span></section>
-  </main>
-  <footer class="atelier-dashboard-footer"><a class="brand" href="dashboard.html">atelier<span>.</span></a><span>Thoughtfully picked, never ordinary.</span><span>© 2026 Atelier</span></footer>
-
-  <script src="../js/storage.js"></script>
-  <script src="../js/products.js"></script>
-  <script src="../js/cart.js"></script>
-</body>
-</html>
+<div class="atelier-announcement"><span>A LITTLE JOY IN EVERY DELIVERY</span><span>FREE SHIPPING ON ORDERS OVER ₹1,499 · THOUGHTFULLY PICKED FOR YOU</span></div>
+<header class="atelier-header">
+ <nav class="atelier-nav">
+  <a class="atelier-logo" href="/index.html">atelier<span>.</span></a>
+  <form class="atelier-search" id="searchForm"><span>⌕</span><input id="searchInput" type="search" placeholder="Search your next favourite..." aria-label="Search products"><button type="submit">Search</button></form>
+  <div class="atelier-nav-links"><a href="#categories">Discover</a><a href="#catalogue">Shop</a><a href="orders.html">Orders</a><a href="profile.html">Account</a><a href="cart.html">Bag <b id="cartCount" class="atelier-bag-count">0</b></a><button id="logoutBtn" class="atelier-signout">Sign out</button></div>
+ </nav>
+ <div class="atelier-category-nav"><a href="#catalogue" data-category="All">All finds</a><a href="#catalogue" data-category="Fashion">Fashion</a><a href="#catalogue" data-category="Electronics">Electronics</a><a href="#catalogue" data-category="Home">Home</a><a href="#catalogue" data-category="Beauty">Beauty</a><a href="#catalogue" data-category="Books">Books</a><a href="#catalogue" data-category="Everyday Finds">Everyday Finds</a><a href="#catalogue" data-category="For Him">For Him</a><a href="#catalogue" data-special="trending">Trending now <b>HOT</b></a><a href="#catalogue" data-special="deals">Today's deals</a></div>
+</header>
+<main class="atelier-home-main">
+<section class="atelier-hero">
+ <div class="atelier-hero-copy"><p class="atelier-eyebrow">THE GOOD FINDS EDIT · 2026</p><h1>Good things.<br><em>Better</em> living.</h1>
+ <p class="atelier-welcome">Welcome back, <strong id="userName">there</strong>. Your next favourite find is waiting.</p>
+ <p class="atelier-hero-description">A thoughtful little corner of the internet for pieces you'll love, use and keep. Discover everyday essentials with a little extra personality.</p>
+ <div class="atelier-hero-actions"><a href="#categories" class="atelier-primary-cta">Explore the collection <span>↗</span></a><a href="#catalogue" class="atelier-text-cta">Find your favourite <span>↓</span></a></div>
+ <p class="atelier-note">Thoughtfully picked, never ordinary.</p></div>
+ <div class="atelier-hero-visual"><div class="atelier-hero-ring ring-a"></div><div class="atelier-hero-ring ring-b"></div><div class="atelier-hero-photo"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1400&q=92" alt="Curated everyday fashion and lifestyle collection"><span>THE EVERYDAY EDIT</span><small>FIND YOUR NEW FAVOURITE.</small></div><div class="atelier-hero-sticker">CURATED<br><b>WITH CARE</b><br>EST. 2026</div><div class="atelier-hero-side">A GOOD MOOD, DELIVERED</div></div>
+</section>
+<section class="atelier-benefit-strip"><div><i>01</i><p><b>Free shipping</b><small>On orders ₹1,499+</small></p></div><div><i>02</i><p><b>Easy returns</b><small>7-day return window</small></p></div><div><i>03</i><p><b>Secure checkout</b><small>Safe, simple payments</small></p></div><div><i>04</i><p><b>Here to help</b><small>Friendly support, always</small></p></div></section>
+<section id="categories" class="atelier-category-section"><div class="atelier-section-title"><div><p class="atelier-eyebrow">PICK YOUR PLAYGROUND</p><h2>A little something <em>for every you.</em></h2></div><p>From the pieces you wear to the details that make a space yours, find everyday favourites in one place.</p></div>
+<div class="atelier-category-cards"><button class="atelier-category-card category-fashion" data-category="Fashion"><span>01 / FASHION</span><strong>Fashion</strong><small>Style your story</small><b>Explore ↗</b></button><button class="atelier-category-card category-electronics" data-category="Electronics"><span>02 / TECH & GADGETS</span><strong>Electronics</strong><small>Smart little upgrades</small><b>Explore ↗</b></button><button class="atelier-category-card category-home" data-category="Home"><span>03 / HOME & LIVING</span><strong>Home</strong><small>Make yourself at home</small><b>Explore ↗</b></button><button class="atelier-category-card category-beauty" data-category="Beauty"><span>04 / BEAUTY</span><strong>Beauty</strong><small>Your daily feel-good</small><b>Explore ↗</b></button><button class="atelier-category-card category-books" data-category="Books"><span>05 / BOOKS & MORE</span><strong>Books</strong><small>For curious minds</small><b>Explore ↗</b></button><button class="atelier-category-card category-everyday" data-category="Everyday Finds"><span>06 / EVERYDAY FINDS</span><strong>Everyday Finds</strong><small>Little things, big joy</small><b>Explore ↗</b></button><button class="atelier-category-card category-for-him" data-category="For Him"><span>07 / FOR HIM</span><strong>For Him</strong><small>Fresh fits, good energy</small><b>Explore ↗</b></button></div>
+</section>
+<section id="catalogue" class="atelier-catalogue"><div class="atelier-section-title"><div><p class="atelier-eyebrow">THE ATELIER EDIT</p><h2>Find your <em>kind</em> of good.</h2></div><p>Lovely finds, useful things and everyday favourites — all in one place.</p></div>
+<div class="atelier-controls"><div class="atelier-input-wrap"><span>⌕</span><input id="catalogueSearch" type="search" placeholder="Search products, categories or little favourites..."></div><select id="categoryFilter" aria-label="Filter by category"><option value="All">All categories</option><option value="Fashion">Fashion</option><option value="Electronics">Electronics</option><option value="Home">Home</option><option value="Beauty">Beauty</option><option value="Books">Books</option><option value="Everyday Finds">Everyday Finds</option><option value="For Him">For Him</option></select><select id="sortFilter" aria-label="Sort products"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="name">Name: A to Z</option></select></div>
+<div class="atelier-result-row"><span id="resultCount">84 GOOD FINDS</span><span>CURATED WITH A LITTLE EXTRA CARE</span></div><div id="productGrid" class="atelier-product-grid"></div><p id="noResults" class="atelier-no-results" hidden>No finds matched that search. Try another word or category.</p></section>
+<section class="atelier-bottom-banner"><p class="atelier-eyebrow">NOT JUST ANOTHER STORE</p><h2>Less scrolling.<br><em>More falling in love.</em></h2><p>Good finds for every day, thoughtfully brought together.</p><a href="#categories">Explore all categories ↗</a></section>
+</main>
+<footer class="atelier-footer"><a class="atelier-logo" href="/index.html">atelier<span>.</span></a><span>Thoughtfully picked, never ordinary.</span><span>© 2026 Atelier · Good things for everyday living.</span></footer>
+<script src="../js/storage.js"></script><script src="../js/products.js"></script><script src="../js/cart.js"></script>
+</body></html>
