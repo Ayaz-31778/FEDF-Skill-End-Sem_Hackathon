@@ -25,7 +25,7 @@ function App() {
 
         const html = await response.text();
         const parsed = new DOMParser().parseFromString(html, 'text/html');
-        const scripts = Array.from(parsed.querySelectorAll('script[src]'));
+        const scripts = Array.from(parsed.querySelectorAll('script'));
         const markup = parsed.body.innerHTML;
 
         if (cancelled) return;
@@ -39,17 +39,20 @@ function App() {
         requestAnimationFrame(async () => {
           for (const originalScript of scripts) {
             if (cancelled) return;
-
-            const scriptUrl = new URL(originalScript.getAttribute('src'), window.location.origin + '/' + pagePath);
             const script = document.createElement('script');
-            script.src = scriptUrl.pathname;
             script.async = false;
-
-            await new Promise((resolve, reject) => {
-              script.onload = resolve;
-              script.onerror = () => reject(new Error(`Unable to load ${script.src}`));
+            if (originalScript.getAttribute('src')) {
+              const scriptUrl = new URL(originalScript.getAttribute('src'), window.location.origin + '/' + pagePath);
+              script.src = scriptUrl.pathname + scriptUrl.search;
+              await new Promise((resolve, reject) => {
+                script.onload = resolve;
+                script.onerror = () => reject(new Error(`Unable to load ${script.src}`));
+                document.body.appendChild(script);
+              });
+            } else if (originalScript.textContent.trim()) {
+              script.textContent = originalScript.textContent;
               document.body.appendChild(script);
-            });
+            }
           }
 
           // The legacy files initialize themselves on DOMContentLoaded.
