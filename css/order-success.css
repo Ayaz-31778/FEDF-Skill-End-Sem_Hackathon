@@ -1,0 +1,57 @@
+/* Warm, high-contrast order confirmation simulation */
+.order-confirmation-page{background:#29362c!important;color:#f4f0e6!important;min-height:100vh}
+.order-confirmation-page .navbar{background:#29362c;border-bottom:1px solid #53604f}
+.order-confirmation-page .navbar .brand{color:#f4f0e6}
+.order-confirmation-page .nav-links a{color:#f4f0e6}
+.order-confirmation-main{width:min(1050px,92%);margin:0 auto;padding:46px 0 76px}
+#orderSuccess{opacity:0;transform:translateY(12px);transition:opacity .35s ease,transform .35s ease}
+#orderSuccess.is-visible{opacity:1;transform:translateY(0)}
+.confirmation-card{background:#fffdf7;color:#29362c;border-radius:18px;overflow:hidden;box-shadow:0 22px 65px #10181035;border:1px solid #e4e0d4}
+.confirmation-topline{display:flex;justify-content:space-between;gap:15px;padding:17px 30px;background:#f3f0e6;border-bottom:1px solid #e0ddcf;color:#68725f;font-size:9px;font-weight:900;letter-spacing:1.7px}
+.confirmation-hero{text-align:center;padding:42px 24px 30px}
+.confirmation-icon{width:66px;height:66px;border-radius:50%;display:grid;place-items:center;margin:0 auto 18px;background:#dce8d7;border:1px solid #b8cbb0;color:#285d3a;font-size:37px;font-weight:900;box-shadow:0 0 0 8px #edf1e8}
+.confirmation-icon-warn{background:#f7e7d9;border-color:#e5c1a5;color:#995a38}
+.confirmation-kicker{font-size:9px;font-weight:900;letter-spacing:2px;color:#b56f50;margin:13px 0}
+.confirmation-hero h1,.confirmation-not-found h1{font:500 clamp(32px,5vw,52px)/1.12 'Playfair Display',Georgia,serif;color:#253329;margin:9px 0 12px}
+.confirmation-hero h1 em{color:#c47f60}
+.confirmation-hero>p:last-child,.confirmation-not-found>p{color:#4d5b4b;font-size:14px;line-height:1.7;margin:0}
+.confirmation-progress{display:grid;grid-template-columns:1fr 1.1fr 1fr 1.1fr 1fr;align-items:center;padding:23px 8%;background:#f7f5ed;border-top:1px solid #e9e5da;border-bottom:1px solid #e9e5da}
+.confirmation-step{display:grid;justify-items:center;gap:5px;text-align:center;min-width:0}
+.confirmation-step>span{width:29px;height:29px;border-radius:50%;display:grid;place-items:center;background:#e5e5dc;color:#65705e;font-size:12px;font-weight:900;border:1px solid #d1d4c8}
+.confirmation-step.is-done>span{background:#dce8d7;color:#285d3a;border-color:#b8cbb0}
+.confirmation-step.is-current>span{background:#29362c;color:#fffdf7;border-color:#29362c}
+.confirmation-step strong{font-size:11px;color:#29362c}
+.confirmation-step small{font-size:9px;color:#65705e}
+.confirmation-progress>i{height:2px;background:#d8dbcf;display:block;margin:0 8px}
+.confirmation-progress>i.is-done{background:#8ca484}
+.confirmation-meta{display:grid;grid-template-columns:1.2fr 1.4fr .8fr;gap:12px;padding:23px 30px;border-bottom:1px solid #e9e5da}
+.confirmation-meta>div{display:flex;flex-direction:column;gap:6px;min-width:0}
+.confirmation-meta span,.confirmation-delivery p span{font-size:9px;letter-spacing:1.2px;font-weight:900;color:#74806e}
+.confirmation-meta strong{font-size:12px;color:#26352b;overflow-wrap:anywhere}
+.confirmation-status{color:#28633e!important}
+.confirmation-columns{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;padding:27px 30px}
+.confirmation-columns h2{font:600 19px 'Playfair Display',Georgia,serif;color:#29362c;margin:0 0 15px}
+.confirmation-item{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:13px 0;border-bottom:1px solid #e8e5db;color:#29362c}
+.confirmation-item>div{display:grid;gap:5px}
+.confirmation-item strong{font-size:12px;color:#29362c}
+.confirmation-item span,.confirmation-muted{font-size:11px;color:#596653}
+.confirmation-total{display:flex;justify-content:space-between;gap:12px;padding:18px 0 4px;color:#29362c;font-weight:800}
+.confirmation-total strong{font-size:21px;color:#26352b}
+.confirmation-delivery{background:#f5f3ea;border:1px solid #e6e3d7;border-radius:10px;padding:18px}
+.confirmation-delivery h2{font-size:17px}
+.confirmation-delivery p{display:grid;gap:5px;margin:0;padding:10px 0;border-bottom:1px solid #e2dfd3}
+.confirmation-delivery p:last-child{border-bottom:0}
+.confirmation-delivery p strong{font-size:11px;line-height:1.6;color:#29362c;overflow-wrap:anywhere}
+.confirmation-note{margin:0 30px;padding:13px 15px;background:#f8eee6;border-left:3px solid #c78364;color:#4c5143;font-size:11px;line-height:1.7}
+.confirmation-actions{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;padding:26px 20px 17px}
+.confirmation-button{display:inline-flex;align-items:center;gap:25px;padding:14px 20px;background:#c78364;color:#26352b!important;font-size:11px;font-weight:900;border-radius:3px}
+.confirmation-button:hover{background:#dfa080}
+.confirmation-button span{font-size:16px}
+.confirmation-link{font-size:11px;font-weight:800;color:#344638!important;border-bottom:1px solid #aab19f;padding:7px 0}
+.confirmation-footer{text-align:center;padding:0 20px 24px;color:#8a725f;font:italic 13px 'Playfair Display',Georgia,serif}
+.confirmation-not-found{text-align:center;padding:55px 25px}
+.confirmation-not-found .confirmation-order-id{display:grid;gap:6px;max-width:360px;margin:22px auto;padding:15px;background:#f5f3ea;color:#29362c}
+.confirmation-order-id span{font-size:9px;letter-spacing:1.3px;color:#68745f;font-weight:900}
+.confirmation-order-id strong{font-size:13px;overflow-wrap:anywhere}
+@media(max-width:700px){.order-confirmation-main{padding:25px 0 45px}.confirmation-topline{padding:14px 18px;font-size:8px}.confirmation-hero{padding:32px 18px 25px}.confirmation-progress{padding:18px 10px;grid-template-columns:1fr .45fr 1fr .45fr 1fr}.confirmation-step strong{font-size:9px}.confirmation-step small{font-size:8px}.confirmation-progress>i{margin:0 3px}.confirmation-meta{padding:18px;grid-template-columns:1fr 1fr}.confirmation-columns{grid-template-columns:1fr;padding:22px 18px;gap:20px}.confirmation-note{margin:0 18px}.confirmation-actions{padding-top:22px}.confirmation-button{width:100%;justify-content:space-between}.confirmation-not-found{padding:38px 18px}}
+@media(prefers-reduced-motion:reduce){#orderSuccess{transition:none}}
