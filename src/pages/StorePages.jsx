@@ -25,6 +25,13 @@ function ProductReviews({ product, user }) {
   const [body, setBody] = useState("");
   const [message, setMessage] = useState("");
   const existingReview = user ? reviews.find(review => String(review.userId) === String(user.id)) : null;
+  useEffect(() => {
+    if (existingReview) {
+      setRating(Number(existingReview.rating) || 5);
+      setTitle(existingReview.title || "");
+      setBody(existingReview.body || "");
+    }
+  }, [existingReview]);
   const average = reviews.length ? reviews.reduce((sum, review) => sum + Number(review.rating || 0), 0) / reviews.length : 0;
   function submitReview(event) {
     event.preventDefault();
