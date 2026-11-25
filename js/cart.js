@@ -11,8 +11,7 @@ function addToCart(productId){
   }else cart.push({productId:product.id,quantity:1});
   saveCart(user.id,cart);
   updateCartCount();
-  const button=event?.currentTarget;
-  if(button){const old=button.innerHTML;button.innerHTML="Added ✓";button.disabled=true;setTimeout(()=>{button.innerHTML=old;button.disabled=false;},900);}
+  alert("Added to your bag.");
 }
 function updateCartCount(){
   const user=getCurrentUser(),el=document.getElementById("cartCount");
