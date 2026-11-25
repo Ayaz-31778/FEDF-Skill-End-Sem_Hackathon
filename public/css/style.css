@@ -762,3 +762,138 @@ header,.site-header,.navbar{background:#263026!important;color:var(--atelier-ivo
 .atelier-bottom-banner:after{content:"♡";position:absolute;right:11%;bottom:36px;font-family:Georgia,serif;font-size:43px;color:#dfe6d8;transform:rotate(-12deg)}
 @keyframes atelier-doodle-float{0%,100%{transform:translateY(0) rotate(-14deg)}50%{transform:translateY(-9px) rotate(2deg)}}
 @media(max-width:680px){.atelier-hero-copy:before{right:1%;top:-8%;font-size:34px}.atelier-hero-copy:after{right:3%;bottom:2%;font-size:29px}.atelier-hero-visual:before{left:0;font-size:39px}.atelier-hero-visual:after{right:0;font-size:31px}.atelier-category-section:before{top:25px;font-size:24px}.atelier-catalogue:before{left:-13px;font-size:25px}.atelier-bottom-banner:before{left:2%;top:25px;font-size:28px}.atelier-bottom-banner:after{right:3%;font-size:29px}}
+
+/* ATELIER SHOP-ONLY DASHBOARD + ADMIN STUDIO */
+.atelier-shop-only{background:#29362c;color:#f4f0e6}.atelier-shop-only .atelier-header,.atelier-admin-page .atelier-header{background:#29362c}
+.atelier-shop-main{width:min(1390px,91%);margin:0 auto;padding:42px 0 90px}
+.atelier-shop-heading{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:15px 0 30px;border-bottom:1px solid #536052}
+.atelier-shop-heading h1,.atelier-admin-heading h1{font-family:'Playfair Display',serif;font-size:clamp(42px,5vw,68px);font-weight:500;line-height:1.04;letter-spacing:-2px;margin:10px 0;color:#f4f0e6}
+.atelier-shop-heading h1 em,.atelier-admin-heading h1 em,.atelier-catalogue-heading h2 em,.atelier-admin-section-title h2 em,.atelier-admin-shortcuts h2 em{color:#e88b69;font-weight:500}
+.atelier-shop-heading>div:first-child>p:last-child{color:#c8cebf;font-size:13px}.atelier-shop-heading strong{color:#e99a78}
+.atelier-shop-note{min-width:175px;border-left:1px solid #d98b6b;padding:8px 0 8px 23px;display:grid;gap:6px;color:#e9a07e}.atelier-shop-note>span{font-size:28px}.atelier-shop-note b{font-family:'Playfair Display',serif;font-size:20px;line-height:1.1;color:#f4f0e6}.atelier-shop-note small{font-size:9px;letter-spacing:1px;color:#c1c9bb}
+.atelier-recommendation{display:grid;grid-template-columns:.85fr 1.15fr;gap:30px;align-items:center;padding:38px 0 45px;border-bottom:1px solid #536052}
+.atelier-recommend-copy h2,.atelier-catalogue-heading h2,.atelier-admin-shortcuts h2,.atelier-admin-section-title h2{font-family:'Playfair Display',serif;font-size:clamp(29px,3vw,42px);font-weight:500;line-height:1.1;margin:8px 0;color:#f4f0e6}
+.atelier-recommend-copy h2 em{color:#e88b69;font-weight:500}.atelier-recommend-copy>p:last-child{color:#c8cebf;font-size:12px;max-width:300px}
+.atelier-recommended-card{display:grid;grid-template-columns:170px 1fr;min-height:175px;background:#e9e6d9;color:#29362c;position:relative;overflow:hidden}
+.atelier-recommended-image{position:relative;min-height:175px;background:#dfe5d9}.atelier-recommended-image img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover}
+.atelier-recommended-info{padding:17px 20px;display:flex;flex-direction:column;align-items:flex-start}.atelier-recommended-info .atelier-product-category{font-size:8px;letter-spacing:1.5px;color:#a95f43;font-weight:800;text-transform:uppercase}.atelier-recommended-info h3{font-family:'Playfair Display',serif;font-size:23px;line-height:1.12;margin:5px 0}.atelier-recommended-info p{font-size:10px;color:#667064;line-height:1.5}.atelier-recommended-info .atelier-product-prices{margin-top:9px}.atelier-recommended-info .atelier-product-stock{font-size:9px;color:#72796b;margin:3px 0 8px}.atelier-recommend-loading{padding:30px;color:#566253}
+.atelier-catalogue-heading{display:flex;align-items:end;justify-content:space-between;margin-bottom:20px}.atelier-catalogue-heading h2{font-size:clamp(34px,4vw,49px)}.atelier-catalogue-doodle{font-family:Georgia,serif;color:#e88b69;font-size:28px;letter-spacing:8px;transform:rotate(-7deg)}
+.atelier-products-only{padding-top:37px}.atelier-shop-only .atelier-controls{display:grid;grid-template-columns:minmax(220px,1fr) 210px 190px;gap:12px;margin:20px 0 15px}.atelier-shop-only .atelier-input-wrap,.atelier-shop-only .atelier-controls select{height:48px;background:#f2efe5;border:1px solid #aab39f;color:#29362c;border-radius:2px}.atelier-shop-only .atelier-input-wrap input{color:#29362c}.atelier-shop-only .atelier-input-wrap input::placeholder{color:#7b8175}
+.atelier-shop-only .atelier-category-nav button{border:0;background:transparent;color:#e5e5d9;font:600 10px 'DM Sans',sans-serif;white-space:nowrap;padding:12px 0;cursor:pointer}.atelier-shop-only .atelier-category-nav button:hover,.atelier-shop-only .atelier-category-nav button.active{color:#ef9b79;border-bottom:1px solid #ef9b79}
+.atelier-shop-only .atelier-result-row{display:flex;justify-content:space-between;gap:15px;color:#b6c0b1;font-size:8px;letter-spacing:1.5px;margin:19px 0 14px}
+.atelier-shop-only .atelier-product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.atelier-shop-only .atelier-product-card{background:#f0ede3;color:#29362c;min-width:0;position:relative;transition:transform .25s,box-shadow .25s}.atelier-shop-only .atelier-product-card:hover{transform:translateY(-5px);box-shadow:0 14px 30px #101b153d}
+.atelier-shop-only .atelier-product-image{height:245px;background:#e1e5d9;position:relative;overflow:hidden}.atelier-shop-only .atelier-product-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}.atelier-shop-only .atelier-product-card:hover .atelier-product-image img{transform:scale(1.04)}
+.atelier-shop-only .atelier-product-tag{position:absolute;top:12px;left:12px;background:#f4f0e6;color:#354136;padding:5px 8px;font-size:7px;letter-spacing:1px;font-weight:800}
+.atelier-shop-only .atelier-product-info{padding:15px 15px 16px;display:flex;flex-direction:column;align-items:flex-start}.atelier-shop-only .atelier-product-category{font-size:8px;letter-spacing:1.5px;color:#a96349;font-weight:800;text-transform:uppercase}
+.atelier-shop-only .atelier-product-info h3{font-family:'Playfair Display',serif;font-size:20px;line-height:1.12;margin:7px 0;color:#29362c}.atelier-shop-only .atelier-product-info>p{font-size:10px;line-height:1.6;color:#697365;min-height:47px}
+.atelier-shop-only .atelier-product-prices{display:flex;align-items:center;gap:10px;margin:12px 0 2px}.atelier-shop-only .atelier-product-prices strong{font-size:17px;color:#29362c}.atelier-shop-only .atelier-product-prices del{font-size:10px;color:#9a8e7e}
+.atelier-shop-only .atelier-product-stock{font-size:9px;color:#778071;margin-bottom:12px}.atelier-shop-only .atelier-add-to-bag{width:100%;border:0;background:#c78364;color:#26342b;padding:12px;font-size:10px;font-weight:800;display:flex;justify-content:space-between;align-items:center;cursor:pointer}.atelier-shop-only .atelier-add-to-bag:hover{background:#e69b78}.atelier-shop-only .atelier-add-to-bag:disabled{opacity:.45;cursor:not-allowed}
+.atelier-shop-only .atelier-no-results{padding:45px;text-align:center;color:#d5d9ce}.atelier-shop-only .atelier-footer{margin-top:0}
+.atelier-admin-page{background:#29362c;color:#f4f0e6;min-height:100vh}.atelier-admin-page .navbar{background:#29362c;border-color:#536052}.atelier-admin-page .nav-links a{color:#e6e5da}.atelier-admin-page .nav-links a.active,.atelier-admin-page .nav-links a:hover{color:#e88b69}
+.atelier-admin-main{width:min(1280px,90%);margin:0 auto;padding:48px 0 90px}.atelier-admin-nav .atelier-logo small,.atelier-admin-badge{font:700 8px 'DM Sans',sans-serif;letter-spacing:1.5px;color:#e88b69;margin-left:9px;vertical-align:middle}
+.atelier-admin-heading{display:flex;justify-content:space-between;align-items:center;padding:15px 0 35px;border-bottom:1px solid #536052}.atelier-admin-heading h1{font-size:clamp(42px,5vw,65px)}.atelier-admin-heading>div:first-child>p:last-child{font-size:12px;color:#c5cebf;max-width:520px}
+.atelier-admin-mark{width:125px;height:125px;border:1px dashed #d98b6b;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#e88b69;font-size:33px;transform:rotate(8deg)}.atelier-admin-mark span{font-size:7px;letter-spacing:1.5px;text-align:center;color:#e9e4d8;line-height:1.5}
+.atelier-admin-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:32px 0}.atelier-admin-stats article{background:#eae7db;color:#29362c;padding:20px 22px;min-height:155px;position:relative}.atelier-admin-stats article>span{display:block;color:#a7644b;font-size:8px;font-weight:800;letter-spacing:1.5px}.atelier-admin-stats article small{display:block;margin-top:12px;color:#707a6c;font-size:10px}.atelier-admin-stats article strong{display:block;font-family:'Playfair Display',serif;font-size:38px;line-height:1.1;margin-top:5px}.atelier-admin-stats article i{position:absolute;right:18px;bottom:12px;color:#c78364;font-size:27px;font-style:normal}
+.atelier-admin-shortcuts{display:grid;grid-template-columns:1.2fr repeat(3,1fr);gap:12px;align-items:stretch;padding:15px 0 42px}.atelier-admin-shortcuts>div{align-self:center}.atelier-admin-shortcuts>div h2{font-size:30px}.atelier-admin-shortcuts>a{background:#344338;border:1px solid #586557;padding:19px;color:#f4f0e6;display:flex;flex-direction:column;gap:6px;min-height:135px}.atelier-admin-shortcuts>a:hover{border-color:#e88b69;transform:translateY(-3px)}.atelier-admin-shortcuts>a span{color:#e88b69;font-size:23px}.atelier-admin-shortcuts>a b{font-family:'Playfair Display',serif;font-size:17px;font-weight:500}.atelier-admin-shortcuts>a small{font-size:9px;color:#c3cbbd}
+.atelier-admin-section-title{display:flex;justify-content:space-between;align-items:end;margin-bottom:17px}.atelier-admin-section-title>a{font-size:10px;color:#e99b7a;border-bottom:1px solid #e99b7a;padding-bottom:5px}
+.atelier-admin-orders #recentOrders{background:#eae7db;color:#29362c;padding:12px 18px}.atelier-admin-orders .data-table{color:#29362c}.atelier-admin-orders .data-table th{color:#9b624d}
+.atelier-admin-products-main .page-title{border-bottom:1px solid #536052;padding-bottom:25px}.atelier-admin-products-main .page-title h1{font-family:'Playfair Display',serif;font-size:48px;color:#f4f0e6}.atelier-admin-products-main .page-title h1 em{color:#e88b69;font-weight:500}.atelier-admin-products-main .panel{background:#eae7db;color:#29362c;border:0;border-radius:0}.atelier-admin-products-main .data-table{color:#29362c}.atelier-admin-products-main .data-table th{color:#9b624d}
+@media(max-width:1000px){.atelier-shop-only .atelier-product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.atelier-admin-stats{grid-template-columns:repeat(2,1fr)}.atelier-admin-shortcuts{grid-template-columns:repeat(2,1fr)}.atelier-admin-shortcuts>div{grid-column:1/-1}}
+@media(max-width:700px){.atelier-shop-main,.atelier-admin-main{width:92%;padding-top:28px}.atelier-shop-heading{align-items:flex-start}.atelier-shop-heading h1{font-size:39px}.atelier-shop-note{min-width:115px;padding-left:12px}.atelier-shop-note b{font-size:16px}.atelier-recommendation{grid-template-columns:1fr;gap:15px;padding:28px 0}.atelier-recommended-card{grid-template-columns:115px 1fr}.atelier-recommended-info{padding:12px}.atelier-recommended-info h3{font-size:18px}.atelier-shop-only .atelier-controls{grid-template-columns:1fr}.atelier-shop-only .atelier-product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.atelier-shop-only .atelier-product-image{height:180px}.atelier-shop-only .atelier-product-info{padding:11px}.atelier-shop-only .atelier-product-info h3{font-size:16px}.atelier-shop-only .atelier-product-info>p{font-size:9px;min-height:55px}.atelier-shop-only .atelier-result-row{font-size:7px}.atelier-admin-heading{align-items:flex-start}.atelier-admin-mark{width:85px;height:85px;font-size:24px}.atelier-admin-mark span{font-size:6px}.atelier-admin-stats{gap:8px}.atelier-admin-stats article{padding:14px;min-height:125px}.atelier-admin-stats article strong{font-size:30px}.atelier-admin-shortcuts{grid-template-columns:1fr 1fr}.atelier-admin-nav .nav-links{gap:10px}.atelier-admin-nav .nav-links a{font-size:9px}}
+@media(max-width:420px){.atelier-shop-heading{display:block}.atelier-shop-note{display:none}.atelier-shop-heading h1{font-size:34px}.atelier-shop-only .atelier-product-grid{grid-template-columns:1fr}.atelier-shop-only .atelier-product-image{height:240px}.atelier-admin-stats{grid-template-columns:1fr 1fr}.atelier-admin-heading h1{font-size:37px}.atelier-admin-shortcuts{grid-template-columns:1fr}}
+
+/* ATELIER V6 — refreshed customer catalogue and admin studio */
+.atelier-shop-only{min-height:100vh;background:#29362c;color:#f4f0e6}
+.atelier-shop-only .atelier-announcement{height:30px;padding:0 5.2%;font-size:8px;letter-spacing:1.4px}
+.atelier-shop-only .atelier-header{position:sticky;top:0;background:#29362c;z-index:80;box-shadow:0 8px 24px #101a1420}
+.atelier-shop-only .atelier-nav{min-height:76px;flex-wrap:nowrap;padding:12px 5.2%;gap:26px}
+.atelier-shop-only .atelier-logo{font-size:36px;white-space:nowrap}
+.atelier-shop-only .atelier-search{width:min(390px,32vw);min-width:220px;height:44px}
+.atelier-shop-only .atelier-nav-links{width:auto;gap:clamp(12px,1.6vw,25px);white-space:nowrap}
+.atelier-shop-only .atelier-nav-links a,.atelier-shop-only .atelier-nav-links button{font-size:10px}
+.atelier-shop-only .atelier-category-nav{height:auto;min-height:52px;display:flex;align-items:center;justify-content:center;gap:clamp(8px,1.7vw,24px);padding:9px 4%;overflow-x:auto;border-top:1px solid #ffffff16;scrollbar-width:none}
+.atelier-shop-only .atelier-category-nav::-webkit-scrollbar{display:none}
+.atelier-shop-only .atelier-category-label{font-size:8px;font-weight:800;letter-spacing:1.8px;color:#e88b69;white-space:nowrap;margin-right:5px}
+.atelier-shop-only .atelier-category-nav button{appearance:none;border:1px solid transparent;background:transparent!important;color:#e6e8dd!important;padding:8px 12px!important;border-radius:22px;font:600 10px 'DM Sans',sans-serif!important;white-space:nowrap;cursor:pointer;transition:.2s}
+.atelier-shop-only .atelier-category-nav button:hover,.atelier-shop-only .atelier-category-nav button.active{background:#e8a080!important;border-color:#e8a080;color:#29362c!important}
+.atelier-shop-only .atelier-shop-main{width:min(1360px,90%);padding:55px 0 90px}
+.atelier-shop-only .atelier-kicker{font-size:9px;font-weight:800;letter-spacing:2px;color:#e99a78;text-transform:uppercase}
+.atelier-shop-only .atelier-shop-heading{align-items:center;padding:0 0 35px}
+.atelier-shop-only .atelier-shop-heading h1{font-family:'Playfair Display',serif;font-size:clamp(46px,5vw,68px);line-height:1.08;letter-spacing:-1.8px;margin:14px 0;color:#f4f0e6}
+.atelier-shop-only .atelier-shop-heading h1 em{color:#e88b69;font-weight:500}
+.atelier-shop-only .atelier-shop-heading>div:first-child>p:last-child{font-size:13px;margin-top:13px}
+.atelier-shop-only .atelier-shop-note{margin-right:3%;padding-left:27px}
+.atelier-shop-only .atelier-recommendation{padding:40px 0 48px;grid-template-columns:.8fr 1.2fr}
+.atelier-shop-only .atelier-recommend-copy h2{font-family:'Playfair Display',serif;font-size:clamp(32px,3.5vw,45px);line-height:1.1}
+.atelier-shop-only .atelier-catalogue-heading{margin-bottom:24px}
+.atelier-shop-only .atelier-controls{grid-template-columns:minmax(250px,1fr) 220px 190px;gap:12px;margin:20px 0}
+.atelier-shop-only .atelier-input-wrap{display:flex;align-items:center;gap:10px;padding:0 15px}
+.atelier-shop-only .atelier-input-wrap input{width:100%;height:100%;font-size:11px}
+.atelier-shop-only .atelier-controls select{padding:0 13px;font-size:11px}
+.atelier-shop-only .atelier-product-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.atelier-shop-only .atelier-product-card{overflow:hidden;border:1px solid #e4dfd2;box-shadow:0 4px 16px #0b140e12}
+.atelier-shop-only .atelier-product-image{height:260px;overflow:hidden;background:#e2e5dc}
+.atelier-shop-only .atelier-product-image img,.atelier-shop-only .atelier-recommended-image img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.atelier-shop-only .atelier-product-info{padding:16px 16px 17px}
+.atelier-shop-only .atelier-product-info h3{font-size:20px;line-height:1.18}
+.atelier-shop-only .atelier-product-info>p{font-size:10px;line-height:1.55;min-height:48px}
+.atelier-shop-only .atelier-recommended-image{overflow:hidden}
+.atelier-shop-only .atelier-recommended-image img{position:absolute;inset:0}
+.atelier-shop-only .atelier-footer{padding:25px 5%;margin-top:0}
+.atelier-shop-only .atelier-image-unavailable{object-fit:contain!important;padding:25px;background:#e8e4d8}
+@media(max-width:1100px){.atelier-shop-only .atelier-nav{flex-wrap:wrap;gap:12px}.atelier-shop-only .atelier-search{order:3;width:100%;max-width:none}.atelier-shop-only .atelier-nav-links{margin-left:auto}.atelier-shop-only .atelier-product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){.atelier-shop-only .atelier-announcement{height:26px;font-size:6px}.atelier-shop-only .atelier-nav{padding:12px 4%;gap:10px}.atelier-shop-only .atelier-nav-links{width:100%;justify-content:space-between;gap:7px}.atelier-shop-only .atelier-nav-links a,.atelier-shop-only .atelier-nav-links button{font-size:8px}.atelier-shop-only .atelier-category-nav{justify-content:flex-start;min-height:47px;padding:7px 4%;gap:7px}.atelier-shop-only .atelier-category-nav button{font-size:9px!important;padding:7px 10px!important}.atelier-shop-only .atelier-shop-main{width:92%;padding-top:34px}.atelier-shop-only .atelier-shop-heading{display:block}.atelier-shop-only .atelier-shop-heading h1{font-size:43px}.atelier-shop-only .atelier-shop-note{display:none}.atelier-shop-only .atelier-recommendation{grid-template-columns:1fr;gap:15px;padding:28px 0}.atelier-shop-only .atelier-controls{grid-template-columns:1fr}.atelier-shop-only .atelier-product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.atelier-shop-only .atelier-product-image{height:190px}.atelier-shop-only .atelier-product-info{padding:11px}.atelier-shop-only .atelier-product-info h3{font-size:16px}}
+@media(max-width:420px){.atelier-shop-only .atelier-product-grid{grid-template-columns:1fr}.atelier-shop-only .atelier-product-image{height:250px}}
+.atelier-admin-page{background:#29362c;color:#f4f0e6;min-height:100vh}
+.atelier-admin-page .atelier-header{position:sticky;top:0;z-index:70}
+.atelier-admin-page .atelier-nav{min-height:76px;padding:12px 5%;display:flex;justify-content:space-between;align-items:center}
+.atelier-admin-page .atelier-logo{font-size:35px}
+.atelier-admin-page .atelier-nav-links{display:flex;align-items:center;gap:clamp(13px,2vw,28px)}
+.atelier-admin-page .atelier-nav-links a{font-size:10px;color:#e6e8df}
+.atelier-admin-page .atelier-nav-links a.active{color:#ed9c7a;border-bottom:1px solid #ed9c7a;padding-bottom:6px}
+.atelier-admin-page .atelier-signout{background:#e8a080;color:#29362c;border:0;padding:12px 17px;font-size:10px;font-weight:800}
+.atelier-admin-main{width:min(1260px,90%);margin:0 auto;padding:48px 0 85px}
+.atelier-admin-heading{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:10px 0 34px;border-bottom:1px solid #536052}
+.atelier-admin-heading h1{font-family:'Playfair Display',serif;font-size:clamp(44px,5vw,66px);font-weight:500;line-height:1.06;margin:12px 0;color:#f4f0e6}
+.atelier-admin-heading h1 em{color:#e88b69}
+.atelier-admin-heading>div:first-child>p:last-child{font-size:12px;color:#c5cebf;max-width:580px;margin-top:12px}
+.atelier-admin-mark{flex-shrink:0}
+.atelier-admin-stats{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;padding:32px 0}
+.atelier-admin-stats article{min-height:160px;padding:22px 24px;background:#f0ede3;box-shadow:0 8px 24px #101b1522}
+.atelier-admin-stats article strong{font-size:42px}
+.atelier-admin-shortcuts{grid-template-columns:1.1fr repeat(3,minmax(0,1fr));gap:14px;padding:12px 0 42px}
+.atelier-admin-shortcuts>a{min-height:145px;padding:20px;background:#344338;border:1px solid #536052;transition:.2s}
+.atelier-admin-shortcuts>a:hover{transform:translateY(-4px);border-color:#e88b69}
+.atelier-admin-orders #recentOrders{background:#f0ede3;padding:14px 18px;color:#29362c;overflow-x:auto}
+.atelier-admin-orders .data-table{width:100%;border-collapse:collapse}
+.atelier-admin-orders .data-table th,.atelier-admin-orders .data-table td{padding:13px 12px;border-bottom:1px solid #d9ddcf;text-align:left;font-size:11px}
+.atelier-admin-orders .data-table th{font-size:8px;letter-spacing:1.4px;text-transform:uppercase;color:#a7654b}
+.atelier-admin-orders .empty-table{padding:25px;color:#6b7567}
+.atelier-products-admin .atelier-products-toolbar{display:flex;align-items:end;justify-content:space-between;gap:20px;padding:30px 0 18px}
+.atelier-products-admin .atelier-products-toolbar h2{font:500 34px 'Playfair Display',serif;margin-top:6px}
+.atelier-products-admin .atelier-products-toolbar h2 span{font:700 11px 'DM Sans',sans-serif;color:#29362c;background:#e8a080;border-radius:20px;padding:5px 9px;vertical-align:middle}
+.atelier-admin-add{border:0;background:#e8a080;color:#29362c;padding:14px 19px;font:800 10px 'DM Sans',sans-serif;cursor:pointer;transition:.2s}
+.atelier-admin-add:hover{background:#f1b08e;transform:translateY(-2px)}
+.atelier-admin-form-panel,.atelier-admin-table-panel{background:#f0ede3;color:#29362c;padding:24px;margin:12px 0 22px;box-shadow:0 8px 24px #101b1520}
+.atelier-form-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.atelier-form-heading h2{font:500 28px 'Playfair Display',serif;margin-top:4px}
+.atelier-form-close{border:0;background:#e4dfd2;color:#29362c;width:34px;height:34px;font-size:23px}
+.atelier-product-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.atelier-product-form label{display:block;font-size:10px;font-weight:800;color:#596455;margin-bottom:6px}
+.atelier-product-form input,.atelier-product-form select,.atelier-product-form textarea{width:100%;border:1px solid #d3d5c9;background:#fffdf7;padding:12px 13px;color:#29362c;outline:none;font-size:11px}
+.atelier-product-form input:focus,.atelier-product-form select:focus,.atelier-product-form textarea:focus{border-color:#c78364;box-shadow:0 0 0 3px #c7836420}
+.atelier-product-form .full-row{grid-column:1/-1}
+.atelier-form-actions{display:flex;gap:10px}
+.atelier-admin-cancel{background:transparent;border:1px solid #c8cdbf;color:#29362c;padding:12px 18px;font-size:10px;font-weight:700}
+.atelier-admin-table-panel{overflow-x:auto}
+.atelier-admin-table-panel .data-table{width:100%;border-collapse:collapse;color:#29362c;min-width:650px}
+.atelier-admin-table-panel .data-table th{background:#e6e1d4;color:#936047;font-size:8px;letter-spacing:1.2px;text-transform:uppercase;text-align:left;padding:13px}
+.atelier-admin-table-panel .data-table td{border-bottom:1px solid #d9ddcf;padding:13px;font-size:10px}
+.atelier-admin-table-panel .data-table tr:hover td{background:#f8f5ec}
+.atelier-admin-table-panel .btn{padding:8px 11px;font-size:9px}
+.atelier-admin-table-panel .btn-outline{border:1px solid #c78364;color:#7e523e}
+.atelier-admin-table-panel .btn-danger{background:#a74e42;color:#fff}
+.atelier-admin-table-panel .empty-table{padding:28px;color:#727b6e}
+@media(max-width:900px){.atelier-admin-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.atelier-admin-shortcuts{grid-template-columns:repeat(2,minmax(0,1fr))}.atelier-admin-shortcuts>div{grid-column:1/-1}}
+@media(max-width:650px){.atelier-admin-main{width:92%;padding-top:30px}.atelier-admin-heading h1{font-size:40px}.atelier-admin-mark{width:84px;height:84px}.atelier-admin-nav .atelier-nav-links{gap:9px;flex-wrap:wrap;justify-content:flex-end}.atelier-admin-nav .atelier-nav-links a{font-size:8px}.atelier-admin-stats{gap:9px}.atelier-admin-stats article{padding:14px;min-height:130px}.atelier-admin-stats article strong{font-size:30px}.atelier-admin-shortcuts{grid-template-columns:1fr 1fr}.atelier-products-admin .atelier-products-toolbar{align-items:flex-start;flex-direction:column}.atelier-product-form{grid-template-columns:1fr}.atelier-product-form .full-row{grid-column:auto}.atelier-admin-form-panel,.atelier-admin-table-panel{padding:14px}}
