@@ -11,8 +11,29 @@ function syncAtelierCatalogue(){
 }
 syncAtelierCatalogue();
 function atelierSafe(value){return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
-function atelierImage(p){return p.image?'<img src="'+atelierSafe(p.image)+'" alt="'+atelierSafe(p.name)+'" loading="lazy" onerror="this.onerror=null;this.src=\'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=85\'">':'<div class="atelier-product-placeholder">ATELIER FIND</div>';}
-function atelierCard(p,featured=false){return '<article class="'+(featured?'atelier-recommended-product':'atelier-product-card')+'"><div class="'+(featured?'atelier-recommended-image':'atelier-product-image')+'">'+atelierImage(p)+'<span class="atelier-product-tag">'+atelierSafe(p.tag||"GOOD FIND")+'</span></div><div class="'+(featured?'atelier-recommended-info':'atelier-product-info')+'"><span class="atelier-product-category">'+atelierSafe(p.category)+'</span><h3>'+atelierSafe(p.name)+'</h3><p>'+atelierSafe(p.description)+'</p><div class="atelier-product-prices"><strong>'+formatCurrency(p.price)+'</strong>'+(p.oldPrice?'<del>'+formatCurrency(p.oldPrice)+'</del>':'')+'</div><div class="atelier-product-stock">'+(p.stock>0?p.stock+" available":"Currently unavailable")+'</div><button class="atelier-add-to-bag" '+(p.stock<1?"disabled":"")+' onclick="addToCart('+JSON.stringify(p.id)+')">Add to bag <span>↗</span></button></div></article>';}
+const ATELIER_IMAGE_FALLBACKS={
+ Fashion:["photo-1490481651871-ab68de25d43d","photo-1529139574466-a303027c1d8b","photo-1521572163474-6864f9cf17ab"],
+ Electronics:["photo-1505740420928-5e560c06d30e","photo-1523275335684-37898b6baf30","photo-1608043152269-423dbba4e7e1"],
+ Home:["photo-1507473885765-e6ed057f782c","photo-1600210492486-724fe5c67fb0","photo-1505693416388-ac5ce068fe85"],
+ Beauty:["photo-1596462502278-27bfdc403348","photo-1522335789203-aabd1fc54bc9","photo-1608248543803-ba4f8c70ae0b"],
+ Books:["photo-1544947950-fa07a98d237f","photo-1512820790803-83ca734da794","photo-1495446815901-a7297e633e8d"],
+ "Everyday Finds":["photo-1513519245088-0e12902e5a38","photo-1505693416388-ac5ce068fe85","photo-1517841905240-472988babdf9"],
+ "For Him":["photo-1516257984-b1b4d707412e","photo-1551028719-00167b16eac5","photo-1542291026-7eec264c27ff"]
+};
+function atelierImage(p){
+ const fallback=(ATELIER_IMAGE_FALLBACKS[p.category]||ATELIER_IMAGE_FALLBACKS["Everyday Finds"])[0];
+ const src=p.image||("https://images.unsplash.com/"+fallback+"?auto=format&fit=crop&w=1400&q=90");
+ return '<img src="'+atelierSafe(src)+'" alt="'+atelierSafe(p.name)+'" loading="lazy" decoding="async" onerror="atelierImageFallback(this)">';
+}
+function atelierImageFallback(img){
+ const category=img.closest("[data-category]")?.dataset.category||"Everyday Finds";
+ const pool=ATELIER_IMAGE_FALLBACKS[category]||ATELIER_IMAGE_FALLBACKS["Everyday Finds"];
+ const tried=Number(img.dataset.fallbackIndex||0);
+ if(tried>=pool.length){img.onerror=null;img.classList.add("atelier-image-unavailable");img.alt="Product image unavailable";return;}
+ img.dataset.fallbackIndex=String(tried+1);
+ img.src="https://images.unsplash.com/"+pool[tried]+"?auto=format&fit=crop&w=1400&q=90";
+}
+function atelierCard(p,featured=false){return '<article class="'+(featured?'atelier-recommended-product':'atelier-product-card')+'"><div class="'+(featured?'atelier-recommended-image':'atelier-product-image')+'" data-category="'+atelierSafe(p.category)+'">'+atelierImage(p)+'<span class="atelier-product-tag">'+atelierSafe(p.tag||"GOOD FIND")+'</span></div><div class="'+(featured?'atelier-recommended-info':'atelier-product-info')+'"><span class="atelier-product-category">'+atelierSafe(p.category)+'</span><h3>'+atelierSafe(p.name)+'</h3><p>'+atelierSafe(p.description)+'</p><div class="atelier-product-prices"><strong>'+formatCurrency(p.price)+'</strong>'+(p.oldPrice?'<del>'+formatCurrency(p.oldPrice)+'</del>':'')+'</div><div class="atelier-product-stock">'+(p.stock>0?p.stock+" available":"Currently unavailable")+'</div><button class="atelier-add-to-bag" '+(p.stock<1?"disabled":"")+' onclick="addToCart('+JSON.stringify(p.id)+')">Add to bag <span>↗</span></button></div></article>';}
 function renderProducts(){
  const grid=document.getElementById("productGrid");if(!grid)return;
  const term=(document.getElementById("catalogueSearch")?.value||"").trim().toLowerCase(),category=document.getElementById("categoryFilter")?.value||"All",sort=document.getElementById("sortFilter")?.value||"featured";
