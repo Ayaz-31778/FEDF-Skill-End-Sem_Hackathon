@@ -1,0 +1,71 @@
+/* Orders page: darker, clearer typography on warm cream cards */
+.orders-page{color:#f4f0e6}
+.orders-page .page-title h1{color:#fffaf0;font-weight:800}
+.orders-page .page-title .eyebrow{color:#c5cfbd}
+.orders-page .order-card{
+  background:#f5f1e7;
+  color:#26352b;
+  border:1px solid #d9d4c7;
+  border-radius:12px;
+  padding:22px 24px;
+  box-shadow:0 8px 22px rgba(12,22,14,.12);
+}
+.orders-page .order-head h3{
+  color:#26352b!important;
+  font-size:16px;
+  font-weight:800;
+  letter-spacing:.15px;
+}
+.orders-page .order-head .muted{
+  color:#53634f!important;
+  font-size:12px;
+  font-weight:600;
+  margin-top:5px;
+}
+.orders-page .order-products{
+  color:#435440!important;
+  font-size:13px;
+  font-weight:600;
+  line-height:1.65;
+  margin:12px 0;
+}
+.orders-page .order-card>.muted{
+  color:#4b5a48!important;
+  font-size:12px;
+  font-weight:600;
+  line-height:1.6;
+}
+.orders-page .order-card .summary-line,
+.orders-page .order-card .summary-total{
+  color:#26352b!important;
+  border-color:#d7d5c9!important;
+  font-weight:800;
+}
+.orders-page .order-card .summary-total strong{
+  color:#1e3024!important;
+  font-size:18px;
+  font-weight:900;
+}
+.orders-page .order-card .status{
+  font-weight:800;
+  border:1px solid rgba(70,80,50,.12);
+  align-self:flex-start;
+}
+.orders-page .order-card .status-Placed{background:#f5df9b;color:#654600}
+.orders-page .order-card .status-Processing{background:#dce8f2;color:#244b6b}
+.orders-page .order-card .status-Shipped{background:#e5def2;color:#4d3675}
+.orders-page .order-card .status-Delivered{background:#dcebdc;color:#245a35}
+.orders-page .order-card .status-Cancelled{background:#f4dddd;color:#8a2929}
+.orders-page #ordersList .empty,
+.orders-page #ordersList .panel{
+  background:#f5f1e7;
+  color:#26352b;
+}
+.orders-page #ordersList .empty h2,
+.orders-page #ordersList .empty p{color:#344633}
+.orders-page #ordersList .empty .btn{color:#fff}
+@media(max-width:620px){
+  .orders-page .order-card{padding:17px}
+  .orders-page .order-head{align-items:flex-start}
+  .orders-page .order-products{font-size:12px}
+}
