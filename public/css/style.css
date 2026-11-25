@@ -1137,3 +1137,36 @@ header,.site-header,.navbar{background:#263026!important;color:var(--atelier-ivo
 .page #cartContent .empty p {
   color: #29362c !important;
 }
+
+
+/* Keep the Continue Shopping action visible in the cart page's top-right corner. */
+.page-title .cart-continue-link {
+  min-height: 44px;
+  padding: 12px 18px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: #f7f3e9 !important;
+  background: #344638 !important;
+  border: 1px solid #c78364 !important;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .25px;
+  text-decoration: none !important;
+  white-space: nowrap;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.page-title .cart-continue-link:hover {
+  color: #26352b !important;
+  background: #e8a080 !important;
+  border-color: #e8a080 !important;
+  transform: translateY(-2px);
+}
+.page-title .cart-continue-link span { color: inherit !important; }
+@media (max-width: 600px) {
+  .page-title { align-items: flex-start; gap: 14px; flex-wrap: wrap; }
+  .page-title .cart-continue-link { margin-left: auto; }
+}
