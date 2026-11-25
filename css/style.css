@@ -1072,3 +1072,60 @@ header,.site-header,.navbar{background:#263026!important;color:var(--atelier-ivo
   .atelier-recommended-info h3 { font-size: 29px !important; }
   .atelier-recommended-info .atelier-add-to-bag { width: 100%; }
 }
+
+
+/* CART PAGE — strong, readable contrast on the warm ivory panels. */
+.page #cartContent .panel {
+  color: #29362c !important;
+  background: #fffdf7;
+}
+.page #cartContent .panel h2,
+.page #cartContent .cart-item strong,
+.page #cartContent .summary-line strong,
+.page #cartContent .summary-total,
+.page #cartContent .summary-total strong {
+  color: #26352b !important;
+  font-weight: 800;
+}
+.page #cartContent .cart-item > div:nth-child(2) strong {
+  color: #26352b !important;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.page #cartContent .cart-item .muted,
+.page #cartContent .summary-line span {
+  color: #64715f !important;
+  font-weight: 600;
+}
+.page #cartContent .summary-line strong {
+  color: #344638 !important;
+}
+.page #cartContent .summary-total {
+  border-top-color: #d8ddcf;
+}
+.page #cartContent .qty-controls strong {
+  color: #29362c !important;
+  font-weight: 800;
+}
+.page #cartContent .qty-controls button {
+  color: #29362c !important;
+  background: #f5f2e9;
+  border-color: #c7cebf;
+  font-weight: 800;
+}
+.page #cartContent .danger-link {
+  color: #a83d35 !important;
+  background: transparent;
+  border: 0;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.page #cartContent .empty {
+  color: #53634f !important;
+}
+.page #cartContent .empty h2,
+.page #cartContent .empty p {
+  color: #29362c !important;
+}
