@@ -403,3 +403,141 @@ header,.site-header,.navbar{background:#263026!important;color:var(--atelier-ivo
   .deal-clock strong{font-size:36px;min-width:55px}
   .deal-round-stamp{right:-12px;bottom:-22px;width:70px;height:70px;font-size:11px}
 }
+
+/* FINAL TYPOGRAPHY + IMAGE POLISH */
+.editorial-hero{
+  background:#293329!important;
+  color:#f4f0e6!important;
+}
+.hero-copy .eyebrow{color:#e1e5d9!important}
+.hero-copy h1{color:#f7f3e9!important;text-wrap:balance}
+.hero-copy h1 em{color:#df9a79!important}
+.hero-description{color:#e0e5d9!important;opacity:1!important;font-size:14px;line-height:1.95;max-width:440px}
+.hero-footnote{color:#e0e5d9!important}
+.hero-footnote .tiny-star{color:#df9a79!important}
+.hero-footnote .footnote-line{background:#84907c!important}
+.hero-actions .text-link{color:#f4f0e6!important;border-color:#9aa58e}
+.hero-actions .text-link span{color:#e0a080!important}
+.hero-image-frame{
+  border:1px solid #d9d0bf;
+  box-shadow:0 22px 55px #10171055,0 0 0 5px #f2eee4;
+}
+.hero-image-frame:before{inset:7px;border:1px solid #ffffffb8}
+.hero-image-frame img{
+  filter:saturate(.92) contrast(1.08) brightness(1.02)!important;
+  image-rendering:auto;
+}
+.image-caption{
+  color:#303b30!important;
+  font-weight:800;
+  text-shadow:none;
+}
+.hero-side-note{
+  color:#e0e5d9!important;
+  font-weight:700;
+  letter-spacing:2px;
+  right:-5%;
+}
+.hero-stamp{
+  background:#dfe6d8!important;
+  color:#303b30!important;
+  border-color:#7d8b74!important;
+  outline-color:#7d8b74!important;
+}
+.hero-stamp span,.hero-stamp strong{color:#303b30!important}
+.orbit-one{border-color:#d18b6d!important}
+.orbit-two{border-color:#9ba88f!important}
+.hero-bottom-rule{border-color:#667260!important;color:#d0d8c9!important}
+.category-shop{
+  background:#303b30!important;
+  color:#f4f0e6!important;
+}
+.category-shop .section-heading{
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(260px,.75fr);
+  align-items:end;
+  gap:clamp(35px,7vw,110px);
+  margin-bottom:42px;
+  border-bottom:1px solid #64705d;
+  padding-bottom:27px;
+}
+.category-shop .section-heading>div{max-width:680px}
+.category-shop .section-heading .eyebrow{color:#d4ddce!important}
+.category-shop .section-heading h2{
+  color:#f4f0e6!important;
+  font-size:clamp(39px,4.6vw,67px);
+  line-height:1.08;
+  letter-spacing:-1.7px;
+  max-width:700px;
+  margin-top:14px;
+}
+.category-shop .section-heading h2 em{color:#df9a79!important}
+.category-shop .section-heading>p{
+  color:#e0e5d9!important;
+  font-size:14px;
+  line-height:1.9;
+  max-width:430px;
+  margin:0 0 5px auto;
+  padding:18px 0 18px 24px;
+  border-left:2px solid #c18465;
+}
+.newsletter{
+  background:#394638!important;
+  color:#f5f1e7!important;
+  border-top:1px solid #5b6a55;
+  border-bottom:1px solid #5b6a55;
+}
+.newsletter .eyebrow{color:#e0e5d9!important}
+.newsletter h2{color:#f8f4e9!important}
+.newsletter h2 em{color:#e09a78!important}
+.newsletter>div>p:last-child{
+  color:#e0e5d9!important;
+  font-size:13px;
+  line-height:1.85;
+  max-width:400px;
+  opacity:1!important;
+}
+#newsletterForm label{color:#f1eee3!important;font-size:9px}
+.newsletter-input{
+  border-bottom:1px solid #c1cbb8!important;
+  min-height:55px;
+}
+.newsletter-input input{
+  color:#fffaf0!important;
+  font-size:14px!important;
+}
+.newsletter-input input::placeholder{color:#d6ddcf!important;opacity:1}
+.newsletter-input button{
+  background:#d18b6b!important;
+  color:#263026!important;
+  font-weight:800;
+  border-radius:2px;
+  padding:13px 19px;
+}
+.newsletter-input button:hover{background:#e2a184!important}
+.newsletter form>small{
+  color:#dce3d5!important;
+  font-size:10px;
+  line-height:1.6;
+}
+.newsletter-doodle{color:#e0a080!important;opacity:.8}
+@media(max-width:760px){
+  .category-shop .section-heading{
+    grid-template-columns:1fr;
+    gap:12px;
+    align-items:start;
+  }
+  .category-shop .section-heading>p{
+    margin:0;
+    max-width:560px;
+    padding:12px 0 12px 17px;
+  }
+  .hero-side-note{right:-2%;font-size:8px}
+}
+@media(max-width:620px){
+  .hero-art{margin:15px 0 25px}
+  .hero-image-frame{width:82%;height:370px}
+  .hero-side-note{right:0}
+  .newsletter{grid-template-columns:1fr;gap:28px}
+  .newsletter-input button{padding:12px 13px}
+}
