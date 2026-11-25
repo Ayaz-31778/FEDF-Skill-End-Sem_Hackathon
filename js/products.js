@@ -4,6 +4,7 @@ function syncAtelierCatalogue(){
  const key="eshop_products",deletedKey="eshop_deleted_products";
  const deleted=new Set(JSON.parse(localStorage.getItem(deletedKey)||"[]").map(String));
  let saved=JSON.parse(localStorage.getItem(key)||"null");if(!Array.isArray(saved))saved=[];
+ saved=saved.filter(p=>![101,102,103,104,105,106,107,108].includes(Number(p.id)));
  const known=new Set(saved.map(p=>String(p.id)));
  window.ATELIER_DASHBOARD_PRODUCTS.forEach(p=>{if(!known.has(String(p.id))&&!deleted.has(String(p.id))){saved.push({...p});known.add(String(p.id));}});
  localStorage.setItem(key,JSON.stringify(saved));
