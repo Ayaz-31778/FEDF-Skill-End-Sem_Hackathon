@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "./link.js";
+import { Link } from "./Link.jsx";
 import { cartCount, getCurrentUser } from "../data/store.js";
 
 export default function SiteLayout({ children, admin = false }) {
