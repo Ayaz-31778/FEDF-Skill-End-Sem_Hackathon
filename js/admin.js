@@ -69,10 +69,22 @@ function renderUsers(){
   box.innerHTML=users.length?`<div class="table-wrap"><table class="data-table"><thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Role</th></tr></thead><tbody>${users.map(u=>`<tr><td>${u.id}</td><td>${u.name}</td><td>${u.email}</td><td>User</td></tr>`).join("")}</tbody></table></div>`:`<div class="empty-table">No registered users yet.</div>`;
 }
 function renderAdminOrders(){
-  const box=document.getElementById("adminOrdersTable");if(!box)return;
+  const box=document.getElementById("adminOrdersTable");
+  if(!box)return;
   if(!adminGuard())return;
   const orders=getOrders(),users=getUsers(),products=getProducts();
-  box.innerHTML=orders.length?`<div class="table-wrap"><table class="data-table"><thead><tr><th>Order</th><th>Customer</th><th>Total</th><th>Date</th><th>Status</th></tr></thead><tbody>${orders.map(o=>`<tr><td>${o.id}</td><td>${o.customerName}<br><small>${users.find(u=>u.id===o.userId)?.email||""}</small></td><td>${formatCurrency(o.total)}</td><td>${o.date}</td><td><select class="select-status" onchange="updateOrderStatus('${o.id}',this.value)">${["Placed","Processing","Shipped","Delivered","Cancelled"].map(s=>`<option ${o.status===s?"selected":""}>${s}</option>`).join("")}</select></td></tr>`).join("")}</tbody></table></div>`:`<div class="empty-table">No orders yet.</div>`;
+  if(!orders.length){box.innerHTML='<div class="empty-table">No orders yet. Customer orders will appear here after checkout.</div>';return;}
+  box.innerHTML='<div class="table-wrap"><table class="data-table"><thead><tr><th>Order details</th><th>Customer</th><th>Items</th><th>Payment</th><th>Total</th><th>Date</th><th>Update status</th></tr></thead><tbody>'+
+    orders.map(o=>{
+      const email=(users.find(u=>String(u.id)===String(o.userId))||{}).email||"";
+      const itemRows=(o.items||[]).map(i=>{
+        const p=products.find(x=>String(x.id)===String(i.productId));
+        const name=i.productName||(p&&p.name)||"Product";
+        return '<div>'+name+' × '+Number(i.quantity)+'</div>';
+      }).join("");
+      const statuses=["Placed","Processing","Shipped","Delivered","Cancelled"];
+      return '<tr><td><strong>'+o.id+'</strong><br><small>'+o.address+'</small></td><td>'+o.customerName+'<br><small>'+o.phone+'</small><br><small>'+email+'</small></td><td>'+itemRows+'</td><td>'+(o.payment||"—")+'<br><small>'+(o.paymentStatus||"Pending")+'</small></td><td>'+formatCurrency(o.total)+'</td><td>'+o.date+'</td><td><select class="select-status" onchange="updateOrderStatus(\''+o.id+'\',this.value)">'+statuses.map(s=>'<option value="'+s+'" '+(o.status===s?"selected":"")+'>'+s+'</option>').join("")+'</select></td></tr>';
+    }).join("")+'</tbody></table></div>';
 }
 function updateOrderStatus(id,status){
   const orders=getOrders();const order=orders.find(o=>o.id===id);if(!order)return;
