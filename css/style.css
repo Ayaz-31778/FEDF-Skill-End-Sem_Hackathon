@@ -741,24 +741,24 @@ header,.site-header,.navbar{background:#263026!important;color:var(--atelier-ivo
 /* ATELIER DOODLE LAYER — playful hand-drawn accents */
 .atelier-dashboard{overflow-x:hidden}
 .atelier-hero-copy,.atelier-hero-visual,.atelier-category-section,.atelier-catalogue{position:relative}
-.atelier-hero-copy:before{content:"✳";position:absolute;right:8%;top:2%;font-size:48px;line-height:1;color:#e88b69;transform:rotate(-14deg);font-weight:400;opacity:.95;animation:atelier-doodle-float 5s ease-in-out infinite}
+.atelier-hero-copy:before{content:"";position:absolute;right:8%;top:2%;font-size:48px;line-height:1;color:#e88b69;transform:rotate(-14deg);font-weight:400;opacity:.95;animation:atelier-doodle-float 5s ease-in-out infinite}
 .atelier-hero-copy:after{content:"♡";position:absolute;right:19%;bottom:12%;font-family:Georgia,serif;font-size:37px;color:#dfe6d8;transform:rotate(13deg)}
 .atelier-hero-visual:before{content:"↝";position:absolute;left:-3%;top:13%;font-family:Georgia,serif;font-size:58px;color:#e88b69;transform:rotate(-20deg);z-index:4}
 .atelier-hero-visual:after{content:"✿";position:absolute;right:-1%;bottom:1%;font-size:43px;color:#dfe6d8;transform:rotate(17deg);z-index:4}
-.atelier-note:after{content:"  ✧  ♡";color:#e88b69;font-style:normal;font-size:18px}
-.atelier-category-section:before{content:"⌁  ✧";position:absolute;right:2%;top:46px;color:#e88b69;font-size:34px;letter-spacing:9px;transform:rotate(-8deg)}
+.atelier-note:after{content:"    ♡";color:#e88b69;font-style:normal;font-size:18px}
+.atelier-category-section:before{content:"⌁  ";position:absolute;right:2%;top:46px;color:#e88b69;font-size:34px;letter-spacing:9px;transform:rotate(-8deg)}
 .atelier-category-card{position:relative;overflow:hidden}
-.atelier-category-card:after{content:"✧";position:absolute;right:11px;top:10px;font-size:23px;opacity:.55;transform:rotate(12deg)}
+.atelier-category-card:after{content:"";position:absolute;right:11px;top:10px;font-size:23px;opacity:.55;transform:rotate(12deg)}
 .atelier-category-card:nth-child(2n):after{content:"♡";font-family:Georgia,serif;font-size:26px}
-.atelier-category-card:nth-child(3n):after{content:"✳";font-size:21px}
+.atelier-category-card:nth-child(3n):after{content:"";font-size:21px}
 .atelier-catalogue:before{content:"✿";position:absolute;left:-34px;top:90px;font-size:38px;color:#e88b69;transform:rotate(-18deg);opacity:.9}
 .atelier-section-title h2{position:relative}
 .atelier-section-title h2:after{content:"";display:block;width:82px;height:9px;margin-top:2px;background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='12' viewBox='0 0 100 12'%3E%3Cpath d='M2 8 Q20 1 38 7 T75 6 T98 5' fill='none' stroke='%23e88b69' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat}
 .atelier-product-card{position:relative}
-.atelier-product-card:nth-child(4n+1) .atelier-product-image:after{content:"✧";position:absolute;right:12px;top:12px;color:#fff;font-size:22px;text-shadow:0 1px 5px #263229}
+.atelier-product-card:nth-child(4n+1) .atelier-product-image:after{content:"";position:absolute;right:12px;top:12px;color:#fff;font-size:22px;text-shadow:0 1px 5px #263229}
 .atelier-product-card:nth-child(4n+2) .atelier-product-image:after{content:"♡";position:absolute;right:12px;top:10px;color:#fff;font-family:Georgia,serif;font-size:24px;text-shadow:0 1px 5px #263229}
 .atelier-bottom-banner{position:relative}
-.atelier-bottom-banner:before{content:"✳";position:absolute;left:10%;top:38px;font-size:45px;color:#e88b69;transform:rotate(17deg)}
+.atelier-bottom-banner:before{content:"";position:absolute;left:10%;top:38px;font-size:45px;color:#e88b69;transform:rotate(17deg)}
 .atelier-bottom-banner:after{content:"♡";position:absolute;right:11%;bottom:36px;font-family:Georgia,serif;font-size:43px;color:#dfe6d8;transform:rotate(-12deg)}
 @keyframes atelier-doodle-float{0%,100%{transform:translateY(0) rotate(-14deg)}50%{transform:translateY(-9px) rotate(2deg)}}
 @media(max-width:680px){.atelier-hero-copy:before{right:1%;top:-8%;font-size:34px}.atelier-hero-copy:after{right:3%;bottom:2%;font-size:29px}.atelier-hero-visual:before{left:0;font-size:39px}.atelier-hero-visual:after{right:0;font-size:31px}.atelier-category-section:before{top:25px;font-size:24px}.atelier-catalogue:before{left:-13px;font-size:25px}.atelier-bottom-banner:before{left:2%;top:25px;font-size:28px}.atelier-bottom-banner:after{right:3%;font-size:29px}}
