@@ -927,3 +927,11 @@ header,.site-header,.navbar{background:#263026!important;color:var(--atelier-ivo
   .admin-users-panel .data-table th { font-size: 10px; }
   .admin-users-panel .data-table td { font-size: 12px; }
 }
+
+/* Global no-star visual rule: use clean editorial marks and shopping-themed doodles instead. */
+.doodle-star,
+.doodle-spark,
+.auth-title-star,
+.tiny-star {
+  display: none !important;
+}
