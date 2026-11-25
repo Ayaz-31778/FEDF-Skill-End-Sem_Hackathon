@@ -42,3 +42,88 @@
 .atelier-demo-box p{font-size:9px;color:#73796b;line-height:1.6}
 .atelier-login-card .auth-bottom{margin-top:15px}
 @media(max-width:620px){.atelier-demo-box{margin-top:13px;padding:10px 12px}.atelier-login-card>.muted{margin-bottom:14px}}
+
+/* ATELIER CUSTOMER DASHBOARD — olive, warm ivory and terracotta */
+.atelier-dashboard{background:#29362c;color:#f5f0e6;font-family:'DM Sans',Arial,sans-serif}
+.atelier-announcement{height:27px;padding:0 5.2%;display:flex;justify-content:space-between;align-items:center;background:#202a22;color:#e9b39a;font-size:8px;font-weight:800;letter-spacing:1.5px}
+.atelier-dashboard-nav{min-height:76px;padding:0 5.2%;background:#29362c;border-bottom:1px solid #566253;color:#f5f0e6}
+.atelier-dashboard-nav .brand,.atelier-dashboard-footer .brand{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;letter-spacing:-1.7px;color:#f5f0e6}
+.atelier-dashboard-nav .brand span,.atelier-dashboard-footer .brand span{color:#e78360}
+.atelier-dashboard-nav .nav-links{gap:clamp(12px,2.2vw,30px)}
+.atelier-dashboard-nav .nav-links a{color:#e4e3d8;font-size:11px;font-weight:700}
+.atelier-dashboard-nav .nav-links a:hover,.atelier-dashboard-nav .nav-links a.active{color:#e78a68}
+.atelier-dashboard-nav .btn-danger{background:#d67c5d;color:#202a22;border-radius:3px;padding:10px 16px}
+.atelier-dashboard-nav .badge{background:#d67c5d;color:#202a22}
+.atelier-dashboard-main{width:min(1250px,89%);margin:0 auto}
+.atelier-dashboard-hero{min-height:545px;display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center;padding:60px 0 45px;border-bottom:1px solid #536052}
+.atelier-dashboard-hero-copy{padding:12px 0}
+.atelier-kicker{font-size:9px;letter-spacing:2px;font-weight:800;color:#d9a184}
+.atelier-dashboard-hero h1{font-family:'Playfair Display',serif;font-size:clamp(58px,6.5vw,88px);font-weight:500;letter-spacing:-3px;line-height:.99;margin:24px 0 20px;color:#f5f0e6}
+.atelier-dashboard-hero h1 em,.atelier-section-heading h2 em,.atelier-bottom-note h2 em{color:#e68a68;font-weight:500}
+.atelier-welcome{font-size:15px;color:#f0e9dc;margin-bottom:10px}
+.atelier-welcome strong{color:#eaa181}
+.atelier-hero-description{max-width:440px;color:#c8cebf;font-size:13px;line-height:1.9}
+.atelier-dark-button{display:inline-flex;align-items:center;gap:36px;background:#e6a07e;color:#263229;padding:15px 20px;margin-top:27px;border-radius:3px;font-size:11px;font-weight:800}
+.atelier-dark-button span{font-size:16px}
+.atelier-hand-note{font-family:'Playfair Display',serif;font-style:italic;color:#d9a184;font-size:14px;margin-top:45px}
+.atelier-dashboard-hero-art{height:405px;position:relative;display:grid;place-items:center;isolation:isolate}
+.atelier-orbit{position:absolute;border:1px dashed #d58b6c;border-radius:50%;z-index:-1}
+.atelier-orbit-one{width:365px;height:365px;transform:rotate(17deg)}
+.atelier-orbit-two{width:420px;height:330px;border-color:#87977f;transform:rotate(-24deg)}
+.atelier-art-card{position:absolute;width:270px;height:320px;padding:17px;background:#e9dfd0;box-shadow:12px 14px 0 #1e2820}
+.atelier-art-card-back{background:#d78d6e;transform:rotate(-8deg) translate(-28px,-13px);display:flex;flex-direction:column;justify-content:space-between;color:#29362c;font-family:'Playfair Display',serif}
+.atelier-art-card-back span{font-size:10px;letter-spacing:1px}
+.atelier-art-card-back b{font-size:24px;line-height:1.1}
+.atelier-art-card-front{transform:rotate(4deg) translate(26px,9px);display:flex;flex-direction:column;gap:10px}
+.atelier-art-photo{flex:1;background:linear-gradient(0deg,#29362c22,#29362c00),url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=90') center/cover}
+.atelier-art-caption{display:flex;justify-content:space-between;align-items:center;color:#29362c}
+.atelier-art-caption span{font-size:7px;letter-spacing:1.5px}
+.atelier-art-caption strong{font-family:'Playfair Display',serif;font-size:16px;line-height:1.05}
+.atelier-art-stamp{position:absolute;bottom:8px;left:4%;width:105px;height:105px;border:1px dashed #829079;border-radius:50%;background:#dfe6d8;color:#354333;display:grid;place-content:center;text-align:center;font-family:'Playfair Display',serif;font-size:14px;line-height:1.05;transform:rotate(-11deg)}
+.atelier-art-arrow{position:absolute;right:9%;bottom:7%;font-size:35px;color:#e68a68;transform:rotate(-20deg)}
+.atelier-benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;padding:24px 0;border-bottom:1px solid #536052}
+.atelier-benefits>div{display:flex;align-items:center;gap:13px}
+.benefit-mark{width:38px;height:38px;border:1px solid #71816d;border-radius:50%;display:grid;place-items:center;color:#e5a080;font-size:9px;flex:none}
+.atelier-benefits p{display:grid;gap:3px}
+.atelier-benefits strong{font-size:11px;color:#f3eee3}
+.atelier-benefits small{font-size:9px;color:#b9c1b3}
+.atelier-catalogue-section{padding:66px 0 70px}
+.atelier-section-heading{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:30px}
+.atelier-section-heading h2{font-family:'Playfair Display',serif;font-size:clamp(36px,4.5vw,58px);font-weight:500;letter-spacing:-1.5px;color:#f5f0e6;margin-top:12px}
+.atelier-section-heading>p{font-size:11px;line-height:1.8;color:#c2cabb;border-left:1px solid #d98a68;padding-left:18px;margin-bottom:8px}
+.atelier-toolbar{display:flex;gap:12px;margin-bottom:22px}
+.atelier-search{height:49px;display:flex;align-items:center;gap:12px;padding:0 16px;flex:1;background:#f5f0e6;color:#29362c;border-radius:3px}
+.atelier-search>span{font-size:23px;color:#7d8878}
+.atelier-search input{border:0;outline:0;background:transparent;width:100%;font-size:12px;color:#29362c}
+.atelier-toolbar select{width:210px;background:#f5f0e6;color:#29362c;border:0;border-radius:3px;padding:0 14px;font-size:11px}
+.atelier-results-line{display:flex;justify-content:space-between;padding:12px 0;margin-bottom:15px;border-top:1px solid #566253;color:#d8a083;font-size:8px;letter-spacing:1.5px;font-weight:800}
+.atelier-product-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.atelier-product-card{background:#f4efe5;border:1px solid #d8d1c3;border-radius:2px;color:#29362c;box-shadow:none;transition:transform .25s,box-shadow .25s}
+.atelier-product-card:hover{transform:translateY(-5px);box-shadow:0 16px 30px #111a143d}
+.atelier-product-image{height:245px;background:#e3e4d8;position:relative;display:block;overflow:hidden}
+.atelier-product-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.atelier-product-card:hover .atelier-product-image img{transform:scale(1.045)}
+.atelier-product-label{position:absolute;left:12px;top:12px;background:#29362c;color:#f5f0e6;padding:6px 8px;font-size:7px;letter-spacing:1.2px;font-weight:800}
+.atelier-product-index{position:absolute;right:12px;bottom:12px;color:#fff;font-size:9px;font-weight:800;text-shadow:0 1px 5px #000}
+.atelier-image-placeholder{height:100%;display:grid;place-content:center;text-align:center;font-family:'Playfair Display',serif;color:#65735e;letter-spacing:2px;font-size:15px}
+.atelier-product-info{padding:16px;gap:8px}
+.atelier-product-info .category{font-size:8px;letter-spacing:1.3px;color:#b96e52}
+.atelier-product-info h3{font-family:'Playfair Display',serif;font-size:19px;line-height:1.2;font-weight:600;color:#29362c}
+.atelier-product-description{font-size:10px;line-height:1.7;color:#667261;min-height:50px}
+.atelier-product-meta{display:flex;justify-content:space-between;align-items:end;gap:8px;padding:8px 0;border-top:1px solid #ddd6c8}
+.atelier-product-meta .price{font-family:'Playfair Display',serif;font-size:20px;color:#29362c}
+.atelier-product-meta .stock{font-size:8px;color:#75806e;text-align:right}
+.atelier-add-button{margin-top:3px;background:#29362c;color:#f5f0e6;border-radius:2px;width:100%;display:flex;justify-content:space-between;padding:12px 13px;font-size:9px;letter-spacing:.5px}
+.atelier-add-button:hover{background:#40503f}
+.atelier-add-button span{color:#e7a080;font-size:14px}
+.atelier-add-button:disabled{opacity:.5;cursor:not-allowed}
+.atelier-empty{background:#f4efe5;color:#29362c}
+.atelier-bottom-note{padding:50px 20px 65px;text-align:center;border-top:1px solid #566253}
+.atelier-bottom-note>p{font-size:8px;letter-spacing:2px;color:#d99a7b;font-weight:800}
+.atelier-bottom-note h2{font-family:'Playfair Display',serif;font-size:clamp(34px,4vw,52px);font-weight:500;margin:12px 0;color:#f5f0e6}
+.atelier-bottom-note>span{font-size:11px;color:#c4cbbd}
+.atelier-dashboard-footer{display:flex;align-items:center;justify-content:space-between;padding:22px 5.5%;background:#202a22;color:#bbc4b5;font-size:9px}
+.atelier-dashboard-footer .brand{font-size:24px}
+@media(max-width:900px){.atelier-dashboard-main{width:92%}.atelier-dashboard-hero{gap:15px}.atelier-dashboard-hero-art{transform:scale(.88)}.atelier-product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.atelier-benefits{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.atelier-announcement{font-size:7px;padding:0 4%}.atelier-dashboard-nav{padding:12px 4%;gap:12px}.atelier-dashboard-nav .brand{font-size:27px}.atelier-dashboard-nav .nav-links{width:100%;justify-content:space-between;gap:8px}.atelier-dashboard-nav .nav-links a{font-size:9px}.atelier-dashboard-nav .btn-danger{font-size:9px;padding:7px}.atelier-dashboard-hero{grid-template-columns:1fr;padding:45px 0 30px}.atelier-dashboard-hero-art{height:340px;transform:scale(.82);margin:-15px 0}.atelier-dashboard-hero h1{font-size:58px}.atelier-benefits{gap:17px 8px}.atelier-section-heading{display:block}.atelier-section-heading>p{margin-top:17px}.atelier-toolbar{flex-direction:column}.atelier-toolbar select{width:100%;height:46px}.atelier-product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.atelier-product-image{height:190px}.atelier-product-info{padding:11px}.atelier-product-info h3{font-size:16px}.atelier-product-description{font-size:9px}.atelier-product-meta{display:block}.atelier-product-meta .stock{text-align:left;margin-top:4px}.atelier-dashboard-footer{gap:10px;flex-wrap:wrap}.atelier-dashboard-footer>span{font-size:8px}}
+@media(max-width:380px){.atelier-product-grid{grid-template-columns:1fr}.atelier-product-image{height:250px}.atelier-dashboard-hero h1{font-size:49px}}
