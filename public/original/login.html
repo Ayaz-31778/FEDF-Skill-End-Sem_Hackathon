@@ -3,35 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login | E-Shop</title>
+  <meta name="theme-color" content="#f7f4ed">
+  <title>Log In | Atelier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="auth-page">
-  <div class="auth-card">
-    <a class="brand centered" href="index.html">E-Shop</a>
-    <h1>Welcome Back</h1>
-    <p class="muted">Login to continue to your dashboard.</p>
-
-    <form id="loginForm">
-      <label>Email</label>
-      <input id="email" type="email" placeholder="Enter email" required>
-
-      <label>Password</label>
-      <input id="password" type="password" placeholder="Enter password" required>
-
-      <button class="btn btn-primary full" type="submit">Login</button>
-      <p id="message" class="form-message"></p>
-    </form>
-
-    <div class="demo-box">
-      <strong>Admin demo account</strong>
-      <p>Email: admin@eshop.com</p>
-      <p>Password: admin123</p>
-    </div>
-
-    <p class="auth-bottom">Don't have an account? <a href="signup.html">Create one</a></p>
-  </div>
-
+<body class="auth-page atelier-auth-page">
+  <main class="auth-shell">
+    <aside class="auth-art-panel" aria-label="Atelier shopping illustration">
+      <a class="auth-art-brand" href="index.html">atelier<span>.</span></a>
+      <div class="auth-art-copy">
+        <p class="auth-art-kicker">GOOD TO HAVE YOU BACK</p>
+        <h1>Your good<br><em>finds</em> are<br>waiting.</h1>
+        <p>Pick up where you left off.<br>Your next favourite is just around the corner.</p>
+        <a href="index.html" class="auth-back-link">← BACK TO THE GOOD FINDS</a>
+      </div>
+      <span class="auth-doodle doodle-star">·</span>
+      <span class="auth-doodle doodle-spark">·</span>
+      <span class="auth-doodle doodle-heart">♡</span>
+      <span class="auth-doodle doodle-note">welcome<br>back! ↗</span>
+      <span class="auth-doodle doodle-circle">GOOD<br>TO SEE YOU</span>
+      <svg class="auth-line-art auth-bag-art" viewBox="0 0 180 190" role="img" aria-label="Hand-drawn shopping bag illustration">
+        <path d="M35 65h110l-8 105H43L35 65Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M62 68V49c0-37 56-37 56 0v19" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="m70 112 15 15 29-34" fill="none" stroke="#f17b57" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="m18 82 10-8m124 47 13 4M23 153l-9 7" fill="none" stroke="#f17b57" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <svg class="auth-line-art auth-cart-art" viewBox="0 0 190 150" role="img" aria-label="Hand-drawn shopping cart illustration">
+        <path d="M18 22h20l17 78h91l19-58H47" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M59 85h81m-72-21h78m-83 0-5-21m94 21 7-21" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+        <circle cx="70" cy="119" r="9" fill="none" stroke="#f17b57" stroke-width="3"/><circle cx="137" cy="119" r="9" fill="none" stroke="#f17b57" stroke-width="3"/>
+        <path d="m94 12 5-8 5 8m-5-8v17" stroke="#f17b57" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>
+      <div class="auth-art-footer"><span>·</span> THOUGHTFULLY PICKED, NEVER ORDINARY.</div>
+    </aside>
+    <section class="auth-form-side">
+      <div class="auth-form-top"><a class="auth-home-button" href="index.html">← HOME</a><span>NEW TO ATELIER?</span><a href="signup.html">CREATE ACCOUNT ↗</a></div>
+      <div class="auth-card atelier-auth-card atelier-login-card">
+        <a class="brand centered" href="index.html">atelier<span class="brand-dot">.</span></a>
+        <p class="eyebrow auth-form-eyebrow"><span class="eyebrow-line"></span> YOUR GOOD-FINDS ERA CONTINUES</p>
+        <h2>Welcome back<span class="auth-title-star">·</span></h2>
+        <p class="muted">Sign in and get back to the things you love.</p>
+        <form id="loginForm">
+          <label for="email">Email Address</label>
+          <input id="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+          <button class="btn btn-primary full auth-submit" type="submit">Log in to my account <span>↗</span></button>
+          <p id="message" class="form-message" aria-live="polite"></p>
+        </form>
+        <div class="demo-box atelier-demo-box">
+          <strong>· Admin demo access</strong>
+          <p>Email: admin@eshop.com</p>
+          <p>Password: admin123</p>
+        </div>
+        <p class="auth-bottom">New around here? <a href="signup.html">Create an account</a></p>
+        <div class="auth-secure-note"><span>♧</span> YOUR DETAILS STAY SAFE AND SECURE</div>
+      </div>
+      <div class="auth-mobile-footer">· GOOD FINDS. GOOD FEELS. GOOD DAYS.</div>
+    </section>
+  </main>
   <script src="js/storage.js"></script>
   <script src="js/auth.js"></script>
 </body>
