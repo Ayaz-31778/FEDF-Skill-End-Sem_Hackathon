@@ -32,13 +32,14 @@ export function initializeStore() {
   if (!localStorage.getItem(KEYS.users)) {
     write(KEYS.users, [{ id: 1, name: "Administrator", email: "admin@eshop.com", password: "admin123", role: "admin" }]);
   }
-  if (!localStorage.getItem(KEYS.products)) {
-    write(KEYS.products, [...starterProducts, ...catalogue()]);
-  } else {
-    const saved = read(KEYS.products, []);
+  if (!localStorage.getItem("eshop_catalogue_migrated")) {
+    const saved = read(KEYS.products, starterProducts);
     const ids = new Set(saved.map(function (p) { return String(p.id); }));
     const merged = saved.concat(catalogue().filter(function (p) { return !ids.has(String(p.id)); }));
-    if (merged.length !== saved.length) write(KEYS.products, merged);
+    write(KEYS.products, merged);
+    localStorage.setItem("eshop_catalogue_migrated", "true");
+  } else if (!localStorage.getItem(KEYS.products)) {
+    write(KEYS.products, [...starterProducts, ...catalogue()]);
   }
   if (!localStorage.getItem(KEYS.orders)) write(KEYS.orders, []);
   if (!localStorage.getItem(KEYS.carts)) write(KEYS.carts, {});
