@@ -1,0 +1,119 @@
+/* Homepage visual restoration — scoped to the Atelier landing page */
+.atelier-homepage{background:#f4f2e9;color:#293328;min-height:100vh}
+.atelier-homepage .store-header{background:rgba(247,244,237,.97)}
+.atelier-homepage .navbar{background:transparent}
+.atelier-homepage .site-footer{margin:0}
+.atelier-homepage .announcement{background:#252a22;color:#f8f5ec}
+.atelier-homepage .editorial-hero{background:#f4f2e9}
+.atelier-homepage .category-photo-grid{grid-template-columns:repeat(6,minmax(0,1fr))}
+.atelier-homepage .category-tile{min-height:190px;border-radius:4px;color:#fff}
+.atelier-homepage .category-tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.68) saturate(.78);transition:transform .4s}
+.atelier-homepage .category-tile:hover img{transform:scale(1.06)}
+.atelier-homepage .category-tile:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#111a)}
+.atelier-homepage .category-tile>*:not(img){position:relative;z-index:2}
+.atelier-homepage .category-tile .category-photo-kicker{font-size:8px;letter-spacing:1.4px;margin-bottom:auto}
+.atelier-homepage .category-tile b{font:600 19px "Playfair Display";margin-top:50px}
+.atelier-homepage .category-tile small{font-size:9px}
+.atelier-homepage .category-empty-slide{background:#dfe6d8;color:#394638}
+.atelier-homepage .category-empty-slide:after{display:none}
+.atelier-homepage .category-empty-slide .empty-slide-art{font:80px "Playfair Display";color:#bd7959;align-self:center}
+.atelier-homepage .category-empty-slide .category-photo-kicker{color:#6a7464}
+.atelier-homepage .collections-section{padding:100px 9% 105px}
+.atelier-homepage .collection-aside-copy{max-width:350px;display:grid;gap:10px;font-size:11px;color:#73766c;line-height:1.7}
+.atelier-homepage .collection-aside-kicker{font-size:8px;letter-spacing:1.6px;color:#bd7657;font-weight:800}
+.atelier-homepage .collection-aside-copy a{font-size:9px;letter-spacing:1px;font-weight:800;color:#293328}
+.atelier-homepage .guys-edit{padding:85px 9%;background:#293328;color:#f4f2e9}
+.atelier-homepage .guys-topline{display:flex;justify-content:space-between;padding-bottom:15px;border-bottom:1px solid #ffffff35;font-size:9px;letter-spacing:1.6px;color:#d4d9ca}
+.atelier-homepage .guys-heading{display:flex;align-items:end;justify-content:space-between;gap:25px;padding:45px 0 30px;position:relative}
+.atelier-homepage .guys-heading h2{font:500 clamp(38px,5vw,62px)/1.05 "Playfair Display";margin:12px 0}
+.atelier-homepage .guys-heading h2 em{color:#e58c6b}
+.atelier-homepage .guys-intro{max-width:430px;color:#c4c9bc;font-size:12px;line-height:1.8}
+.atelier-homepage .guys-shop-link{padding:13px 18px;border:1px solid #c7cdbd;color:#f4f2e9;font-size:9px;letter-spacing:1px;font-weight:800;white-space:nowrap}
+.atelier-homepage .guys-doodle{font:italic 18px "Playfair Display";color:#e58c6b;transform:rotate(10deg)}
+.atelier-homepage .guys-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:230px;gap:13px}
+.atelier-homepage .guys-card{position:relative;overflow:hidden;color:white;background:#5a6255;grid-column:span 2}
+.atelier-homepage .guys-card:first-child,.atelier-homepage .guys-card:nth-child(2){grid-column:span 3}
+.atelier-homepage .guys-card img{position:absolute;width:100%;height:100%;inset:0;object-fit:cover;filter:brightness(.66) saturate(.75);transition:transform .45s}
+.atelier-homepage .guys-card:hover img{transform:scale(1.06)}
+.atelier-homepage .guys-card:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#111b)}
+.atelier-homepage .guys-card>*:not(img){position:absolute;z-index:2}
+.atelier-homepage .guys-card-label{top:17px;left:18px;font-size:8px;letter-spacing:1.3px}
+.atelier-homepage .guys-card-title{left:20px;bottom:49px;font:500 27px/1.03 "Playfair Display"}
+.atelier-homepage .guys-card-title em{color:#f2a181}
+.atelier-homepage .guys-card-cta{left:20px;bottom:18px;font-size:8px;letter-spacing:1.2px;font-weight:800}
+.atelier-homepage .guys-card-sticker{right:18px;top:42px;padding:10px;background:#e99a79;color:#293328;font:600 12px/1 "Playfair Display";transform:rotate(8deg)}
+.atelier-homepage .guys-bottom-note{display:flex;align-items:center;gap:12px;margin-top:25px;color:#c9cdbf;font-size:8px;letter-spacing:1.2px}
+.atelier-homepage .guys-bottom-note>span:first-child{color:#e58c6b;font-size:18px}
+.atelier-homepage .guys-bottom-line{height:1px;flex:1;background:#ffffff35}
+.atelier-homepage .guys-bottom-note a{color:#e9a080;font-weight:800}
+.atelier-homepage .featured-shop{padding:90px 9%;background:#f0ede4}
+.atelier-homepage .home-catalogue-intro{font-size:11px;color:#77796f;margin:-18px 0 25px}
+.atelier-homepage .product-grid-home{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+.atelier-homepage .home-product-card{background:#fbfaf5;border:1px solid #e1ded3;min-width:0}
+.atelier-homepage .home-product-image{display:block;position:relative;height:220px;overflow:hidden;background:#e5e2d8}
+.atelier-homepage .home-product-image img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.atelier-homepage .home-product-image:hover img{transform:scale(1.05)}
+.atelier-homepage .home-product-image .product-tag{position:absolute;top:12px;left:12px;background:#fbfaf5;padding:6px 9px;font-size:8px;letter-spacing:1px}
+.atelier-homepage .home-product-info{padding:15px}
+.atelier-homepage .home-product-info .product-category{font-size:8px;letter-spacing:1.3px;text-transform:uppercase;color:#bd7657;font-weight:800}
+.atelier-homepage .home-product-info h3{font:600 18px "Playfair Display";margin:7px 0}
+.atelier-homepage .home-product-description{font-size:10px;line-height:1.6;color:#77796f;min-height:32px}
+.atelier-homepage .product-price{font:700 16px "Playfair Display";margin:13px 0}
+.atelier-homepage .product-price del{font:10px "DM Sans";color:#999;margin-left:6px}
+.atelier-homepage .product-add{display:flex;justify-content:space-between;padding-top:10px;border-top:1px solid #e4e0d6;font-size:9px;font-weight:800;color:#394638}
+.atelier-homepage .product-note{margin-top:22px;font-size:9px;color:#7b7d73;letter-spacing:.4px}
+.atelier-homepage .product-note span{color:#bd7657;font-size:16px}
+.atelier-homepage .deal-banner{display:grid;grid-template-columns:.55fr 1.1fr 1fr;align-items:center;gap:25px;padding:65px 9%;background:#e4e9dc;position:relative;overflow:hidden}
+.atelier-homepage .deal-doodle{font:700 28px/1 "Playfair Display";color:#bd7657;transform:rotate(-10deg);text-align:center}
+.atelier-homepage .deal-copy h2{font:500 clamp(37px,4.5vw,57px)/1.02 "Playfair Display";margin:12px 0}
+.atelier-homepage .deal-copy h2 em{color:#bd7657}
+.atelier-homepage .deal-copy>p:not(.eyebrow){font-size:11px;line-height:1.8;color:#70786b;max-width:370px;margin-bottom:20px}
+.atelier-homepage .deal-clock-wrap{position:relative;text-align:center;padding:35px 20px;background:#293328;color:#f4f2e9}
+.atelier-homepage .deal-clock-wrap>p{font-size:8px;letter-spacing:1.5px}
+.atelier-homepage .deal-clock{display:flex;justify-content:center;gap:10px;align-items:center;margin:15px 0 5px}
+.atelier-homepage .deal-clock strong{font:500 36px "Playfair Display"}
+.atelier-homepage .deal-clock i{font-style:normal;color:#e58c6b}
+.atelier-homepage .deal-clock-wrap small{font-size:8px;color:#c7cdbd}
+.atelier-homepage .deal-round-stamp{position:absolute;right:-16px;top:-19px;width:66px;height:66px;border-radius:50%;display:grid;place-items:center;background:#e99a79;color:#293328;font:600 11px/1.1 "Playfair Display";transform:rotate(12deg)}
+.atelier-homepage .trust-strip{background:#252a22;color:#f1eee4;display:flex;justify-content:space-evenly;gap:18px;padding:24px 4%;font-size:9px;font-weight:700;letter-spacing:.5px}
+.atelier-homepage .trust-strip span{color:#e58c6b}
+.atelier-homepage .love-notes{padding:85px 9% 95px;background:#f4f2e9}
+.atelier-homepage .love-doodle{font:50px "Playfair Display";color:#bd7657}
+.atelier-homepage .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.atelier-homepage .review-card{position:relative;padding:25px;background:#fbfaf5;border:1px solid #e2ded3}
+.atelier-homepage .review-featured{background:#e4e9dc}
+.atelier-homepage .review-stars{color:#bd7657;letter-spacing:5px;font-size:19px}
+.atelier-homepage .review-card>p{font:italic 16px/1.6 "Playfair Display";margin:15px 0 22px}
+.atelier-homepage .review-person{display:flex;align-items:center;gap:10px}
+.atelier-homepage .review-avatar{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font:600 15px "Playfair Display"}
+.atelier-homepage .avatar-peach{background:#f1d5c6}.atelier-homepage .avatar-sage{background:#d1ddc9}.atelier-homepage .avatar-lilac{background:#e5d6e5}
+.atelier-homepage .review-person>span:nth-child(2){display:grid;gap:2px;font-size:10px}
+.atelier-homepage .review-person small{font-size:8px;color:#77796f}
+.atelier-homepage .review-verified{margin-left:auto;font-size:7px;letter-spacing:.7px;color:#8a8b80}
+.atelier-homepage .review-spark{position:absolute;right:20px;top:12px;font-size:30px;color:#bd7657}
+.atelier-homepage .review-disclaimer{font-size:8px;color:#88897e;margin-top:15px}
+.atelier-homepage .manifesto{background:#dfe6d8}
+.atelier-homepage .newsletter{display:grid;grid-template-columns:70px 1fr 1fr;gap:30px;align-items:center;padding:70px 9%;background:#293328;color:#f4f2e9;position:relative}
+.atelier-homepage .newsletter .eyebrow{color:#d6b6a6}
+.atelier-homepage .newsletter h2{font:500 40px/1.05 "Playfair Display";margin:10px 0}
+.atelier-homepage .newsletter h2 em{color:#e58c6b}
+.atelier-homepage .newsletter>div>p:last-child{font-size:11px;color:#c9cdbf}
+.atelier-homepage .newsletter-doodle{font:60px "Playfair Display";color:#e58c6b}
+.atelier-homepage .newsletter form label{font-size:8px;letter-spacing:1.5px;color:#d6b6a6}
+.atelier-homepage .newsletter-input{display:flex;margin:10px 0}
+.atelier-homepage .newsletter-input input{min-width:0;flex:1;padding:14px;border:1px solid #697363;background:#354235;color:#fff;font-size:11px;outline:0}
+.atelier-homepage .newsletter-input button{border:0;padding:0 17px;background:#e39a79;color:#293328;font-size:10px;font-weight:800}
+.atelier-homepage .newsletter form small{font-size:8px;color:#c3c8ba}
+.atelier-homepage .atelier-home-footer{display:block;padding:45px 9% 20px;background:#252a22;color:#f4f2e9;border:0;text-align:left}
+.atelier-homepage .footer-main{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:35px;padding-bottom:35px}
+.atelier-homepage .footer-brand .brand{font-size:34px;color:#f4f2e9}
+.atelier-homepage .footer-brand p{font-size:10px;line-height:1.8;color:#c4c8bb;margin:10px 0 15px}
+.atelier-homepage .social-doodles{display:flex;gap:12px}
+.atelier-homepage .social-doodles a{width:27px;height:27px;border:1px solid #77806e;border-radius:50%;display:grid;place-items:center;color:#e4a081}
+.atelier-homepage .footer-column{display:grid;align-content:start;gap:12px}
+.atelier-homepage .footer-column b{font-size:8px;letter-spacing:1.4px;color:#e4a081;margin-bottom:5px}
+.atelier-homepage .footer-column a{font-size:10px;color:#d1d4c9}
+.atelier-homepage .footer-column a:hover{color:#e4a081}
+.atelier-homepage .footer-bottom{display:flex;justify-content:space-between;gap:15px;padding-top:17px;border-top:1px solid #ffffff2c;font-size:8px;letter-spacing:1.2px;color:#c4c8bb}
+@media(max-width:900px){.atelier-homepage .category-photo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.atelier-homepage .guys-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:220px}.atelier-homepage .guys-card,.atelier-homepage .guys-card:first-child,.atelier-homepage .guys-card:nth-child(2){grid-column:span 1}.atelier-homepage .product-grid-home{grid-template-columns:repeat(3,minmax(0,1fr))}.atelier-homepage .deal-banner{grid-template-columns:1fr 2fr}.atelier-homepage .deal-clock-wrap{grid-column:1/-1}.atelier-homepage .newsletter{grid-template-columns:45px 1fr}.atelier-homepage .newsletter form{grid-column:2}.atelier-homepage .footer-main{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.atelier-homepage .category-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.atelier-homepage .category-tile{min-height:165px}.atelier-homepage .collections-section,.atelier-homepage .category-shop,.atelier-homepage .featured-shop,.atelier-homepage .love-notes,.atelier-homepage .guys-edit{padding:60px 7%}.atelier-homepage .guys-heading{display:block}.atelier-homepage .guys-shop-link{display:inline-block;margin-top:18px}.atelier-homepage .guys-doodle{display:none}.atelier-homepage .guys-grid{grid-template-columns:1fr 1fr;grid-auto-rows:185px;gap:9px}.atelier-homepage .guys-card-title{font-size:20px}.atelier-homepage .product-grid-home{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.atelier-homepage .home-product-image{height:160px}.atelier-homepage .home-product-info{padding:10px}.atelier-homepage .deal-banner{grid-template-columns:1fr;padding:50px 7%}.atelier-homepage .deal-doodle{display:none}.atelier-homepage .trust-strip{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:22px 8%}.atelier-homepage .review-grid{grid-template-columns:1fr}.atelier-homepage .newsletter{grid-template-columns:1fr;padding:55px 7%;gap:12px}.atelier-homepage .newsletter-doodle{display:none}.atelier-homepage .newsletter form{grid-column:auto}.atelier-homepage .footer-main{grid-template-columns:1fr 1fr;gap:25px}.atelier-homepage .footer-bottom{flex-direction:column;gap:8px}.atelier-homepage .store-header .navbar{grid-template-columns:1fr auto}.atelier-homepage .header-search{grid-row:2;grid-column:1/-1}.atelier-homepage .store-header .nav-actions{grid-column:2;grid-row:1}.atelier-homepage .category-nav{justify-content:flex-start}}
