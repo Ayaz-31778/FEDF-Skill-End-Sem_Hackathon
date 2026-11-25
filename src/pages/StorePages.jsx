@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import SiteLayout from "../components/SiteLayout.jsx";
-import { getProducts, getCurrentUser, getCart, getOrders, money, addToCart, updateCartItem, removeCartItem, cartTotal, placeOrder, saveUsers } from "../data/store.js";
+import { getProducts, getCurrentUser, getCart, getOrders, money, cartCount, addToCart, updateCartItem, removeCartItem, cartTotal, placeOrder, saveUsers } from "../data/store.js";
 
 function ProductCard({ product, user, onAdded }) {
   return <article className="product-card"><a href={"/category.html?product="+product.id} className="product-image">{product.image ? <img src={product.image} alt={product.name} loading="lazy"/> : <span className="product-placeholder">ATELIER FIND</span>}<span className="product-tag">{product.tag || product.category}</span></a><div className="product-info"><p className="product-category">{product.category}</p><h3>{product.name}</h3><p className="product-description">{product.description}</p><div className="product-buy"><strong>{money(product.price)}</strong><button onClick={()=>onAdded(product.id)} disabled={!product.stock}>Add to bag</button></div><small>{product.stock > 0 ? product.stock+" available" : "Out of stock"}</small></div></article>;
