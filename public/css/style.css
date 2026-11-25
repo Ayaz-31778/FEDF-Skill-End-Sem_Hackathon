@@ -949,3 +949,134 @@ header,.site-header,.navbar{background:#263026!important;color:var(--atelier-ivo
 .atelier-category-card:nth-child(3n):after { content: "↗" !important; }
 .atelier-product-card:nth-child(4n+1) .atelier-product-image:after { content: "↗" !important; }
 .doodle-star, .doodle-spark, .auth-title-star, .tiny-star { display: none !important; }
+
+/* Featured recommendation card — fill the entire slot with a balanced image/content split. */
+.atelier-recommendation {
+  grid-template-columns: minmax(280px, .72fr) minmax(0, 1.28fr) !important;
+  gap: clamp(24px, 3vw, 48px) !important;
+  align-items: stretch !important;
+  padding: 42px 0 48px !important;
+}
+.atelier-recommend-copy {
+  align-self: center;
+  max-width: 430px;
+}
+.atelier-recommend-copy h2 {
+  max-width: 430px;
+  font-size: clamp(32px, 3.3vw, 48px) !important;
+  letter-spacing: -.7px;
+}
+.atelier-recommend-copy > p:last-child {
+  max-width: 340px !important;
+  font-size: 13px !important;
+  line-height: 1.8 !important;
+}
+.atelier-recommended-card {
+  display: block !important;
+  width: 100%;
+  min-width: 0;
+  min-height: 340px !important;
+  height: 100%;
+  background: #e9e6d9;
+  overflow: hidden;
+}
+.atelier-recommended-product {
+  display: grid !important;
+  grid-template-columns: minmax(210px, .9fr) minmax(0, 1.1fr);
+  width: 100%;
+  min-height: 340px;
+  height: 100%;
+  background: #e9e6d9;
+  color: #29362c;
+}
+.atelier-recommended-image {
+  display: block;
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  min-height: 340px !important;
+  height: 100%;
+  overflow: hidden;
+  background: #dfe5d9;
+}
+.atelier-recommended-image img {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .55s ease;
+}
+.atelier-recommended-product:hover .atelier-recommended-image img {
+  transform: scale(1.035);
+}
+.atelier-recommended-image .atelier-product-tag {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 2;
+}
+.atelier-recommended-info {
+  min-width: 0;
+  padding: clamp(24px, 3vw, 42px) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.atelier-recommended-info .atelier-product-category {
+  font-size: 9px !important;
+  letter-spacing: 1.8px !important;
+}
+.atelier-recommended-info h3 {
+  max-width: 440px;
+  font-size: clamp(27px, 3vw, 40px) !important;
+  line-height: 1.08 !important;
+  margin: 12px 0 !important;
+  overflow-wrap: anywhere;
+}
+.atelier-recommended-info > p {
+  max-width: 430px;
+  font-size: 12px !important;
+  line-height: 1.8 !important;
+}
+.atelier-recommended-info .atelier-product-prices {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-top: 22px !important;
+}
+.atelier-recommended-info .atelier-product-prices strong {
+  font-size: 22px;
+}
+.atelier-recommended-info .atelier-product-stock {
+  margin: 8px 0 18px !important;
+  font-size: 10px !important;
+}
+.atelier-recommended-info .atelier-add-to-bag {
+  width: min(100%, 250px);
+  min-height: 48px;
+  padding: 0 18px;
+}
+@media (max-width: 900px) {
+  .atelier-recommendation {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+  .atelier-recommend-copy { max-width: 620px; }
+  .atelier-recommended-card,
+  .atelier-recommended-product { min-height: 300px !important; }
+  .atelier-recommended-image { min-height: 300px !important; }
+}
+@media (max-width: 560px) {
+  .atelier-recommendation { padding: 30px 0 36px !important; }
+  .atelier-recommended-product {
+    grid-template-columns: 1fr !important;
+  }
+  .atelier-recommended-image { min-height: 245px !important; height: 245px !important; }
+  .atelier-recommended-info { padding: 23px !important; }
+  .atelier-recommended-info h3 { font-size: 29px !important; }
+  .atelier-recommended-info .atelier-add-to-bag { width: 100%; }
+}
