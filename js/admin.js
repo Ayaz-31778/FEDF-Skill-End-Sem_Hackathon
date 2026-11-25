@@ -38,7 +38,7 @@ function editProduct(id){
 }
 function deleteProduct(id){
   if(!confirm("Delete this product?"))return;
-  setData(STORAGE_KEYS.products,getProducts().filter(p=>p.id!==id));
+  const deleted=new Set(getData("eshop_deleted_products",[]).map(String));deleted.add(String(id));setData("eshop_deleted_products",[...deleted]);setData(STORAGE_KEYS.products,getProducts().filter(p=>String(p.id)!==String(id)));
   renderAdminProducts();
 }
 function saveProduct(e){
@@ -56,7 +56,7 @@ function saveProduct(e){
     emoji:"🛍️"
   };
   const index=products.findIndex(p=>p.id===data.id);
-  if(index>=0)products[index]=data; else products.push(data);
+  if(index>=0)products[index]=data; else products.push(data);\n  setData("eshop_deleted_products",getData("eshop_deleted_products",[]).filter(x=>String(x)!==String(data.id)));
   setData(STORAGE_KEYS.products,products);
   document.getElementById("productFormPanel").classList.add("hidden");
   resetProductForm(); renderAdminProducts(); alert("Product saved successfully.");
