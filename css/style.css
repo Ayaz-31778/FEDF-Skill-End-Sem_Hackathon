@@ -897,3 +897,33 @@ header,.site-header,.navbar{background:#263026!important;color:var(--atelier-ivo
 .atelier-admin-table-panel .empty-table{padding:28px;color:#727b6e}
 @media(max-width:900px){.atelier-admin-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.atelier-admin-shortcuts{grid-template-columns:repeat(2,minmax(0,1fr))}.atelier-admin-shortcuts>div{grid-column:1/-1}}
 @media(max-width:650px){.atelier-admin-main{width:92%;padding-top:30px}.atelier-admin-heading h1{font-size:40px}.atelier-admin-mark{width:84px;height:84px}.atelier-admin-nav .atelier-nav-links{gap:9px;flex-wrap:wrap;justify-content:flex-end}.atelier-admin-nav .atelier-nav-links a{font-size:8px}.atelier-admin-stats{gap:9px}.atelier-admin-stats article{padding:14px;min-height:130px}.atelier-admin-stats article strong{font-size:30px}.atelier-admin-shortcuts{grid-template-columns:1fr 1fr}.atelier-products-admin .atelier-products-toolbar{align-items:flex-start;flex-direction:column}.atelier-product-form{grid-template-columns:1fr}.atelier-product-form .full-row{grid-column:auto}.atelier-admin-form-panel,.atelier-admin-table-panel{padding:14px}}
+
+/* Admin registered-users table: improve contrast and readability on the ivory panel. */
+.admin-users-panel,
+.admin-users-panel .table-wrap,
+.admin-users-panel .data-table {
+  color: #29362c;
+}
+.admin-users-panel .data-table th {
+  color: #596b57;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  padding: 15px 12px;
+}
+.admin-users-panel .data-table td {
+  color: #29362c;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 16px 12px;
+  border-bottom: 1px solid #d9ddcf;
+}
+.admin-users-panel .data-table tbody tr:hover td {
+  background: #f5f1e7;
+}
+@media (max-width: 650px) {
+  .admin-users-panel { padding: 16px; }
+  .admin-users-panel .data-table th { font-size: 10px; }
+  .admin-users-panel .data-table td { font-size: 12px; }
+}
