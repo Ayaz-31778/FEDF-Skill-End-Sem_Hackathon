@@ -2,8 +2,84 @@ import React, { useEffect, useMemo, useState } from "react";
 import SiteLayout from "../components/SiteLayout.jsx";
 import { getProducts, getCurrentUser, getCart, getOrders, money, cartCount, addToCart, updateCartItem, removeCartItem, cartTotal, placeOrder, saveUsers } from "../data/store.js";
 
+function readProductReviews() {
+  try {
+    const value = JSON.parse(localStorage.getItem("eshop_product_reviews") || "[]");
+    return Array.isArray(value) ? value : [];
+  } catch {
+    return [];
+  }
+}
+function productReviewStats(productId) {
+  const reviews = readProductReviews().filter(review => String(review.productId) === String(productId));
+  return { count: reviews.length, average: reviews.length ? reviews.reduce((sum, review) => sum + Number(review.rating || 0), 0) / reviews.length : 0 };
+}
 function ProductCard({ product, user, onAdded }) {
-  return <article className="product-card"><a href={"/category.html?product="+product.id} className="product-image">{product.image ? <img src={product.image} alt={product.name} loading="lazy"/> : <span className="product-placeholder">ATELIER FIND</span>}<span className="product-tag">{product.tag || product.category}</span></a><div className="product-info"><p className="product-category">{product.category}</p><h3>{product.name}</h3><p className="product-description">{product.description}</p><div className="product-buy"><strong>{money(product.price)}</strong><button onClick={()=>onAdded(product.id)} disabled={!product.stock}>Add to bag</button></div><small>{product.stock > 0 ? product.stock+" available" : "Out of stock"}</small></div></article>;
+  const stats = productReviewStats(product.id);
+  return <article className="product-card"><a href={"/category.html?product="+product.id} className="product-image">{product.image ? <img src={product.image} alt={product.name} loading="lazy"/> : <span className="product-placeholder">ATELIER FIND</span>}<span className="product-tag">{product.tag || product.category}</span></a><div className="product-info"><p className="product-category">{product.category}</p><h3><a href={"/category.html?product="+product.id}>{product.name}</a></h3><p className="product-description">{product.description}</p><div className="product-buy"><strong>{money(product.price)}</strong><button onClick={()=>onAdded(product.id)} disabled={!product.stock}>Add to bag</button></div><small>{product.stock > 0 ? product.stock+" available" : "Out of stock"}</small><a className="product-review-link" href={"/category.html?product="+product.id+"#reviews"}>{stats.count ? "★ "+stats.average.toFixed(1)+" · "+stats.count+" review"+(stats.count===1?"":"s") : "Be the first to review"} · Write a review ↗</a></div></article>;
+}
+function ProductReviews({ product, user }) {
+  const [reviews, setReviews] = useState(() => readProductReviews().filter(review => String(review.productId) === String(product.id)));
+  const [rating, setRating] = useState(5);
+  const [title, setTitle] = useState("");
+  const [body, setBody] = useState("");
+  const [message, setMessage] = useState("");
+  const existingReview = user ? reviews.find(review => String(review.userId) === String(user.id)) : null;
+  const average = reviews.length ? reviews.reduce((sum, review) => sum + Number(review.rating || 0), 0) / reviews.length : 0;
+  function submitReview(event) {
+    event.preventDefault();
+    if (!user) {
+      setMessage("Please sign in to share your review.");
+      return;
+    }
+    if (body.trim().length < 10) {
+      setMessage("Please write at least 10 characters about your experience.");
+      return;
+    }
+    const allReviews = readProductReviews();
+    const review = {
+      id: existingReview ? existingReview.id : "review-" + Date.now(),
+      productId: product.id,
+      userId: user.id,
+      userName: user.name || "Atelier customer",
+      rating: Number(rating),
+      title: title.trim(),
+      body: body.trim(),
+      date: new Date().toISOString()
+    };
+    const index = allReviews.findIndex(item => String(item.productId) === String(product.id) && String(item.userId) === String(user.id));
+    if (index >= 0) allReviews[index] = review;
+    else allReviews.push(review);
+    localStorage.setItem("eshop_product_reviews", JSON.stringify(allReviews));
+    setReviews(allReviews.filter(item => String(item.productId) === String(product.id)));
+    setTitle("");
+    setBody("");
+    setMessage(existingReview ? "Your review has been updated." : "Thank you — your review has been published.");
+  }
+  return <section className="product-reviews panel" id="reviews">
+    <div className="reviews-heading"><div><p className="eyebrow">KIND WORDS, HONESTLY SHARED</p><h2>Reviews for this find</h2><p>{reviews.length ? "★ "+average.toFixed(1)+" out of 5 · "+reviews.length+" customer review"+(reviews.length===1?"":"s") : "No reviews yet. Your experience can help the next shopper."}</p></div><span className="reviews-big-rating">{reviews.length ? average.toFixed(1) : "—"}<small>/ 5</small></span></div>
+    <div className="product-review-list">{reviews.length ? reviews.slice().sort((a,b)=>new Date(b.date)-new Date(a.date)).map(review=><article className="product-review" key={review.id}><div className="product-review-top"><span className="review-stars-live">{"★".repeat(Number(review.rating))}{"☆".repeat(5-Number(review.rating))}</span><time>{new Date(review.date).toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric"})}</time></div>{review.title&&<h3>{review.title}</h3>}<p>{review.body}</p><small>By {review.userName}{user&&String(review.userId)===String(user.id)?" · Your review":""}</small></article>) : <div className="reviews-empty">Be the first to tell others what you think about {product.name}.</div>}</div>
+    <form className="product-review-form" onSubmit={submitReview}>
+      <p className="eyebrow">{existingReview ? "UPDATE YOUR FEEDBACK" : "SHARE YOUR EXPERIENCE"}</p><h3>{existingReview ? "Edit your review" : "Write a product review"}</h3>
+      {!user && <p className="review-login-note">Sign in to write a review for this item. <a href="/login.html">Sign in ↗</a></p>}
+      <label> Your rating <select value={rating} onChange={event=>setRating(Number(event.target.value))}><option value="5">★★★★★ — Loved it</option><option value="4">★★★★☆ — Really good</option><option value="3">★★★☆☆ — It's okay</option><option value="2">★★☆☆☆ — Could be better</option><option value="1">★☆☆☆☆ — Not for me</option></select></label>
+      <label>Review title <input value={title} onChange={event=>setTitle(event.target.value)} placeholder="Sum up your experience (optional)" maxLength="80"/></label>
+      <label>Your review <textarea value={body} onChange={event=>setBody(event.target.value)} rows="5" minLength="10" maxLength="1000" placeholder="What did you like? How did this item work for you?" required/></label>
+      {message&&<p className="review-form-message" role="status">{message}</p>}
+      <button className="primary-button" type="submit" disabled={!user}>{existingReview ? "Update review" : "Publish review"}</button>
+      <small className="review-form-footnote">One review per customer for each item. You can update your review later.</small>
+    </form>
+  </section>;
+}
+function ProductDetailPage({ product, user, onAdded }) {
+  const [notice,setNotice] = useState("");
+  function addProduct() {
+    if (!user) { window.location.href="/login.html"; return; }
+    const result = addToCart(user.id, product.id);
+    setNotice(result.message);
+  }
+  const stats = productReviewStats(product.id);
+  return <SiteLayout><main className="content-main product-detail-main"><a className="subtle-link" href="/user/dashboard.html">← Back to all finds</a><section className="product-detail panel"><div className="product-detail-image">{product.image ? <img src={product.image} alt={product.name}/> : <span>ATELIER FIND</span>}</div><div className="product-detail-copy"><p className="eyebrow">{product.category}</p><h1>{product.name}</h1><div className="product-detail-rating">{stats.count ? "★ "+stats.average.toFixed(1)+" · "+stats.count+" review"+(stats.count===1?"":"s") : "Be the first to review this item"}</div><strong className="product-detail-price">{money(product.price)}</strong><p>{product.description}</p><p className="product-detail-stock">{product.stock>0?product.stock+" available":"Currently out of stock"}</p><button className="primary-button" onClick={addProduct} disabled={!product.stock}>Add to bag</button>{notice&&<p className="notice">{notice}</p>}<a className="product-detail-review-jump" href="#reviews">Read reviews or write your own ↓</a></div></section><ProductReviews product={product} user={user}/></main></SiteLayout>;
 }
 export function HomePage() {
   const user = getCurrentUser();
@@ -70,10 +146,13 @@ export function HomePage() {
   );
 }
 export function ShopPage() {
-  const user=getCurrentUser(); const params=new URLSearchParams(window.location.search); const slug=params.get("category")||"all"; const categoryNames={"all":"All","fashion":"Fashion","electronics":"Electronics","home":"Home","beauty":"Beauty","books":"Books","everyday":"Everyday Finds","for-him":"For Him","trending":"All","deals":"All"}; const [query,setQuery]=useState(params.get("search")||""); const [category,setCategory]=useState(categoryNames[slug]||"All"); const [notice,setNotice]=useState("");
-  const products=useMemo(()=>getProducts().filter(p=>(category==="All"||p.category.toLowerCase()===category.toLowerCase()||(category==="For Him"&&p.category==="Fashion"))&&((p.name+" "+p.category+" "+(p.description||"")).toLowerCase().includes(query.toLowerCase()))),[category,query]);
+  const user=getCurrentUser(); const params=new URLSearchParams(window.location.search); const slug=params.get("category")||"all"; const productId=params.get("product"); const categoryNames={"all":"All","fashion":"Fashion","electronics":"Electronics","home":"Home","beauty":"Beauty","books":"Books","everyday":"Everyday Finds","for-him":"For Him","trending":"All","deals":"All"}; const [query,setQuery]=useState(params.get("search")||""); const [category,setCategory]=useState(categoryNames[slug]||"All"); const [notice,setNotice]=useState("");
+  const allProducts=getProducts();
+  const selectedProduct=productId ? allProducts.find(item=>String(item.id)===String(productId)) : null;
+  const products=useMemo(()=>allProducts.filter(p=>(category==="All"||p.category.toLowerCase()===category.toLowerCase()||(category==="For Him"&&p.category==="Fashion"))&&((p.name+" "+p.category+" "+(p.description||"")).toLowerCase().includes(query.toLowerCase()))),[category,query]);
   function add(id){if(!user){window.location.href="/login.html";return;}const result=addToCart(user.id,id);setNotice(result.message);}
   const categories=["All","Fashion","Electronics","Home","Beauty","Books","Everyday Finds","For Him"];
+  if (productId) return selectedProduct ? <ProductDetailPage product={selectedProduct} user={user} onAdded={add}/> : <SiteLayout><main className="content-main"><div className="panel empty-state"><h2>We couldn't find that item.</h2><a className="primary-button inline-button" href="/user/dashboard.html">Back to all finds</a></div></main></SiteLayout>;
   return <SiteLayout><main className="store-main"><section className="shop-heading"><div><p className="eyebrow">THE ATELIER EDIT · 2026</p><h1>Find your <em>kind</em> of good.</h1><p>Hi {user ? user.name : "there"} — a little mix of lovely things, picked for everyday living.</p></div><div className="shop-note">Good things,<br/>one good place.<small>Browse a little. Find a lot.</small></div></section><section className="catalogue-head"><div><p className="eyebrow">THE FULL COLLECTION</p><h2>All the good <em>stuff.</em></h2></div><input className="search-input" placeholder="Search products, details or categories…" value={query} onChange={e=>setQuery(e.target.value)}/></section><div className="category-chips">{categories.map(c=><button key={c} className={category===c?"selected":""} onClick={()=>setCategory(c)}>{c}</button>)}</div>{notice&&<p className="notice">{notice}</p>}<div className="product-grid">{products.map(p=><ProductCard key={p.id} product={p} user={user} onAdded={add}/>)}</div>{products.length===0&&<div className="empty-state">No products match your search.</div>}</main></SiteLayout>;
 }
 export function CartPage() {
