@@ -723,3 +723,11 @@ header,.site-header,.navbar{background:#263026!important;color:var(--atelier-ivo
 @media(max-width:1100px){.catalogue-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.catalogue-controls{flex-wrap:wrap;justify-content:flex-end}}
 @media(max-width:760px){.catalogue-main{width:92%}.catalogue-intro{align-items:flex-start;flex-direction:column}.catalogue-side-note{max-width:400px}.catalogue-toolbar{align-items:flex-start;flex-direction:column}.catalogue-controls{width:100%;justify-content:flex-start}.catalogue-layout{grid-template-columns:1fr}.catalogue-sidebar{position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px}.catalogue-filter-title,.catalogue-sidebar-note{grid-column:1/-1}.catalogue-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.catalogue-product-image{height:190px}.catalogue-bottom{grid-template-columns:1fr;text-align:center}.catalogue-bottom p{grid-row:1}.catalogue-bottom>a{text-align:center}.catalogue-footer{flex-wrap:wrap}.catalogue-header .navbar{grid-template-columns:1fr auto;gap:12px}.catalogue-header .header-search{grid-column:1/-1;grid-row:2}.catalogue-header .nav-actions{grid-column:2;grid-row:1}}
 @media(max-width:460px){.catalogue-grid{gap:10px}.catalogue-product-image{height:155px}.catalogue-product-info{padding:10px}.catalogue-product-info h3{font-size:15px}.catalogue-product-info>p{font-size:9px;min-height:57px}.catalogue-controls{display:grid;grid-template-columns:1fr 1fr}.catalogue-search-label{font-size:8px}.catalogue-controls input,.catalogue-controls select{width:100%}.selection-dialog{grid-template-columns:1fr;max-height:90vh;overflow:auto}.selection-image,.selection-image img{min-height:210px;height:210px}.selection-content{padding:25px 22px}.selection-content h2{font-size:29px}}
+
+/* Sharper, more spacious catalogue photography */
+.catalogue-product-image{height:245px;background:#e9e6dc}
+.catalogue-product-image img{width:100%;height:100%;object-fit:cover;object-position:center;image-rendering:auto}
+.catalogue-product-card{overflow:hidden}
+.catalogue-product-info>p{line-height:1.65}
+@media(max-width:760px){.catalogue-product-image{height:205px}}
+@media(max-width:460px){.catalogue-product-image{height:165px}}
