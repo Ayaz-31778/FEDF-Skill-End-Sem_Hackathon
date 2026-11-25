@@ -117,3 +117,75 @@
 .atelier-homepage .footer-bottom{display:flex;justify-content:space-between;gap:15px;padding-top:17px;border-top:1px solid #ffffff2c;font-size:8px;letter-spacing:1.2px;color:#c4c8bb}
 @media(max-width:900px){.atelier-homepage .category-photo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.atelier-homepage .guys-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:220px}.atelier-homepage .guys-card,.atelier-homepage .guys-card:first-child,.atelier-homepage .guys-card:nth-child(2){grid-column:span 1}.atelier-homepage .product-grid-home{grid-template-columns:repeat(3,minmax(0,1fr))}.atelier-homepage .deal-banner{grid-template-columns:1fr 2fr}.atelier-homepage .deal-clock-wrap{grid-column:1/-1}.atelier-homepage .newsletter{grid-template-columns:45px 1fr}.atelier-homepage .newsletter form{grid-column:2}.atelier-homepage .footer-main{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.atelier-homepage .category-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.atelier-homepage .category-tile{min-height:165px}.atelier-homepage .collections-section,.atelier-homepage .category-shop,.atelier-homepage .featured-shop,.atelier-homepage .love-notes,.atelier-homepage .guys-edit{padding:60px 7%}.atelier-homepage .guys-heading{display:block}.atelier-homepage .guys-shop-link{display:inline-block;margin-top:18px}.atelier-homepage .guys-doodle{display:none}.atelier-homepage .guys-grid{grid-template-columns:1fr 1fr;grid-auto-rows:185px;gap:9px}.atelier-homepage .guys-card-title{font-size:20px}.atelier-homepage .product-grid-home{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.atelier-homepage .home-product-image{height:160px}.atelier-homepage .home-product-info{padding:10px}.atelier-homepage .deal-banner{grid-template-columns:1fr;padding:50px 7%}.atelier-homepage .deal-doodle{display:none}.atelier-homepage .trust-strip{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:22px 8%}.atelier-homepage .review-grid{grid-template-columns:1fr}.atelier-homepage .newsletter{grid-template-columns:1fr;padding:55px 7%;gap:12px}.atelier-homepage .newsletter-doodle{display:none}.atelier-homepage .newsletter form{grid-column:auto}.atelier-homepage .footer-main{grid-template-columns:1fr 1fr;gap:25px}.atelier-homepage .footer-bottom{flex-direction:column;gap:8px}.atelier-homepage .store-header .navbar{grid-template-columns:1fr auto}.atelier-homepage .header-search{grid-row:2;grid-column:1/-1}.atelier-homepage .store-header .nav-actions{grid-column:2;grid-row:1}.atelier-homepage .category-nav{justify-content:flex-start}}
+
+
+/* Dark-olive Atelier editorial finish — aligned with the supplied reference screens */
+.atelier-homepage{background:#303d33;color:#f2eee3}
+.atelier-homepage .announcement,.atelier-homepage .store-header{background:#263229;color:#f2eee3}
+.atelier-homepage .navbar,.atelier-homepage .category-nav{background:transparent;color:#f2eee3}
+.atelier-homepage .brand,.atelier-homepage .nav-icon,.atelier-homepage .category-nav a{color:#f2eee3}
+.atelier-homepage .header-search{border-color:#788174;background:#354438}
+.atelier-homepage .header-search input{color:#f2eee3}
+.atelier-homepage .editorial-hero,.atelier-homepage .category-shop,.atelier-homepage .collections-section{background:#303d33;color:#f2eee3}
+.atelier-homepage .editorial-hero .eyebrow,.atelier-homepage .section-heading .eyebrow{color:#d9a083}
+.atelier-homepage .editorial-hero h1,.atelier-homepage .section-heading h2{color:#f2eee3}
+.atelier-homepage .hero-description,.atelier-homepage .section-heading>p{color:#c8cec1}
+.atelier-homepage .text-link,.atelier-homepage .hero-footnote{color:#e5e0d3}
+.atelier-homepage .hero-bottom-rule{border-color:#718071;color:#c9d0c3}
+.atelier-homepage .benefit-ribbon{background:#222d25;color:#f2eee3}
+.atelier-homepage .benefit-ribbon small{color:#bfc8ba}
+.atelier-homepage .collections-section{border-top:1px solid #566454}
+.atelier-homepage .collection-aside-copy{color:#c8cec1}
+.atelier-homepage .collection-aside-copy a{color:#f2eee3}
+.atelier-homepage .guys-edit{background:#202b23}
+.atelier-homepage .guys-grid{grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:230px}
+.atelier-homepage .guys-card{grid-column:span 2}
+.atelier-homepage .guys-card.guys-fragrance{grid-column:span 2;order:1}
+.atelier-homepage .guys-card.guys-street{grid-column:span 4;order:2}
+.atelier-homepage .guys-card.guys-sneakers{grid-column:span 4;order:3}
+.atelier-homepage .guys-card.guys-accessories{grid-column:span 2;order:4}
+.atelier-homepage .guys-card.guys-tech{grid-column:span 2;order:5}
+.atelier-homepage .featured-shop{background:#e9e7dc;color:#293328}
+.atelier-homepage .featured-shop .section-heading h2{color:#293328}
+.atelier-homepage .featured-shop .section-heading .eyebrow{color:#a96b50}
+.atelier-homepage .deal-banner{background:#354337;color:#f2eee3;grid-template-columns:.45fr 1.05fr 1.25fr;min-height:360px}
+.atelier-homepage .deal-copy .eyebrow{color:#d9a083}
+.atelier-homepage .deal-copy h2{color:#f2eee3}
+.atelier-homepage .deal-copy>p:not(.eyebrow){color:#d0d5ca}
+.atelier-homepage .deal-clock-wrap{background:#f1eee4;color:#29382d;box-shadow:7px 8px 0 #c99a80;transform:rotate(.8deg);max-width:520px;width:100%;justify-self:center}
+.atelier-homepage .deal-clock-wrap>p{color:#6b7568}
+.atelier-homepage .deal-clock strong{background:#e0e7d9;padding:8px 12px;font-size:32px}
+.atelier-homepage .deal-clock i{color:#bd7657}
+.atelier-homepage .deal-clock-wrap small{color:#73796c}
+.atelier-homepage .deal-round-stamp{right:-18px;top:-18px;border:3px solid #f1eee4;outline:2px solid #d28b6d}
+.atelier-homepage .trust-strip{background:#222d25}
+.atelier-homepage .love-notes{background:#303d33;color:#f2eee3}
+.atelier-homepage .love-notes .section-heading h2{color:#f2eee3}
+.atelier-homepage .review-card{background:#39483b;border-color:#657362;color:#f2eee3}
+.atelier-homepage .review-featured{background:#e1e6d8;color:#293328}
+.atelier-homepage .review-card>p{color:inherit}
+.atelier-homepage .review-person small,.atelier-homepage .review-verified{color:#c2cabc}
+.atelier-homepage .review-featured .review-person small,.atelier-homepage .review-featured .review-verified{color:#6e7769}
+.atelier-homepage .review-disclaimer{color:#bdc6b9}
+.atelier-homepage .manifesto{background:#dfe6d8;color:#293328}
+.atelier-homepage .newsletter{grid-template-columns:minmax(150px,.72fr) minmax(0,2.1fr);gap:35px;align-items:center;background:#354337;color:#f2eee3;padding:72px 7%}
+.atelier-homepage .newsletter-doodle{display:none}
+.atelier-homepage .newsletter>div:nth-child(2){max-width:210px}
+.atelier-homepage .newsletter h2{font-size:clamp(34px,4vw,48px);line-height:.98}
+.atelier-homepage .newsletter>div>p:last-child{line-height:1.8}
+.atelier-homepage .newsletter form{max-width:760px;width:100%;justify-self:end}
+.atelier-homepage .newsletter-input{border-bottom:1px solid #8a9586}
+.atelier-homepage .newsletter-input input{background:transparent;border:1px solid #657464}
+.atelier-homepage .atelier-home-footer{background:#222d25}
+@media(max-width:900px){
+ .atelier-homepage .guys-card.guys-fragrance,.atelier-homepage .guys-card.guys-street,.atelier-homepage .guys-card.guys-sneakers,.atelier-homepage .guys-card.guys-accessories,.atelier-homepage .guys-card.guys-tech{grid-column:span 1}
+ .atelier-homepage .newsletter{grid-template-columns:180px minmax(0,1fr)}
+}
+@media(max-width:620px){
+ .atelier-homepage .guys-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:185px}
+ .atelier-homepage .guys-card.guys-fragrance,.atelier-homepage .guys-card.guys-street,.atelier-homepage .guys-card.guys-sneakers,.atelier-homepage .guys-card.guys-accessories,.atelier-homepage .guys-card.guys-tech{grid-column:span 1}
+ .atelier-homepage .newsletter{grid-template-columns:1fr;padding:55px 7%;gap:12px}
+ .atelier-homepage .newsletter>div:nth-child(2){max-width:240px}
+ .atelier-homepage .newsletter form{grid-column:auto;justify-self:stretch}
+ .atelier-homepage .deal-clock-wrap{transform:none}
+}
