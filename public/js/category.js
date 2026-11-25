@@ -88,11 +88,11 @@ let activeProduct = null;
 function money(value){ return "₹" + Number(value).toLocaleString("en-IN"); }
 function safeText(value){ return String(value).replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char])); }
 function getVisibleProducts(){
-  let products = currentCategory === "all" ? [...atelierAllProducts] :
+  let products = currentCategory === "all" ? [...atelierAllProducts].slice(0,15) :
     currentCategory === "trending" ? atelierAllProducts.filter((p,i) => i % 7 < 2).slice(0,15) :
     currentCategory === "deals" ? atelierAllProducts.filter((p,i) => i % 3 !== 1).slice(0,15) :
     atelierAllProducts.filter(p => p.category === currentCategory);
-  if(focus && currentCategory === "for-him") products = products.filter(p => p.focus === focus);
+  if(focus && currentCategory === "for-him") products.sort((a,b) => Number(b.focus === focus) - Number(a.focus === focus));
   const term = searchInput.value.trim().toLowerCase();
   if(term) products = products.filter(p => (p.name + " " + p.description + " " + p.categoryName).toLowerCase().includes(term));
   if(sortSelect.value === "low") products.sort((a,b)=>a.price-b.price);
