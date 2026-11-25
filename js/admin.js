@@ -56,7 +56,8 @@ function saveProduct(e){
     emoji:"🛍️"
   };
   const index=products.findIndex(p=>p.id===data.id);
-  if(index>=0)products[index]=data; else products.push(data);\n  setData("eshop_deleted_products",getData("eshop_deleted_products",[]).filter(x=>String(x)!==String(data.id)));
+  if(index>=0)products[index]=data; else products.push(data);
+  setData("eshop_deleted_products",getData("eshop_deleted_products",[]).filter(x=>String(x)!==String(data.id)));
   setData(STORAGE_KEYS.products,products);
   document.getElementById("productFormPanel").classList.add("hidden");
   resetProductForm(); renderAdminProducts(); alert("Product saved successfully.");
