@@ -33,8 +33,20 @@ function placeOrder(event){
   for(const row of resolved){const p=latest.find(x=>String(x.id)===String(row.product.id));if(!p||Number(p.stock)<row.quantity){button.disabled=false;button.dataset.busy="";button.textContent="Place Order";checkoutMessage("Stock changed during checkout. Please review your cart.",false);return;}}
   const now=new Date(),total=resolved.reduce((sum,row)=>sum+Number(row.product.price)*row.quantity,0);
   const order={id:"ORD"+now.getTime(),userId:user.id,customerName:fullName,phone,address,payment,paymentStatus:payment==="Cash on Delivery"?"Pay on delivery":"Demo payment successful",paymentReference:payment==="Cash on Delivery"?"":"DEMO-"+now.getTime(),items:resolved.map(row=>({productId:row.product.id,productName:row.product.name,price:Number(row.product.price),quantity:row.quantity})),total,status:"Placed",date:now.toLocaleString("en-IN"),createdAt:now.toISOString()};
-  try{const all=getOrders();all.unshift(order);setData(STORAGE_KEYS.orders,all);resolved.forEach(row=>{const p=latest.find(x=>String(x.id)===String(row.product.id));p.stock=Number(p.stock)-row.quantity;});setData(STORAGE_KEYS.products,latest);saveCart(user.id,[]);window.location.href="order-success.html?orderId="+encodeURIComponent(order.id);}
-  catch(error){button.disabled=false;button.dataset.busy="";button.textContent="Place Order";checkoutMessage("Could not save this order in Local Storage. Please try again.",false);}
+  const previousOrders=getOrders(),previousProducts=getProducts(),previousCart=getCart(user.id);
+  try{
+   const all=[order,...previousOrders];
+   resolved.forEach(row=>{const p=latest.find(x=>String(x.id)===String(row.product.id));p.stock=Number(p.stock)-row.quantity;});
+   setData(STORAGE_KEYS.orders,all);
+   setData(STORAGE_KEYS.products,latest);
+   saveCart(user.id,[]);
+   window.location.href="order-success.html?orderId="+encodeURIComponent(order.id);
+  }catch(error){
+   try{setData(STORAGE_KEYS.orders,previousOrders);setData(STORAGE_KEYS.products,previousProducts);saveCart(user.id,previousCart);}catch(rollbackError){console.error("Order rollback failed",rollbackError);}
+   button.disabled=false;button.dataset.busy="";button.textContent="Place Order";
+   checkoutMessage("Order could not be saved. Your cart has been restored. Please check browser storage and try again.",false);
+   console.error("Checkout failed",error);
+  }
  },payment==="Cash on Delivery"?350:1100);
 }
 function renderOrderSuccess(){
