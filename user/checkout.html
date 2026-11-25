@@ -8,6 +8,6 @@
 <label for="address">Delivery Address</label><textarea id="address" rows="4" autocomplete="street-address" maxlength="400" placeholder="House number, street, area, city and PIN code" required></textarea>
 <label for="payment">Payment Method</label><select id="payment" required><option value="Cash on Delivery">Cash on Delivery</option><option value="UPI (Demo)">UPI (Demo simulation)</option><option value="Card (Demo)">Card (Demo simulation)</option></select>
 <p class="muted checkout-demo-note">Demo checkout only: UPI and card selections simulate a successful payment. No real payment is collected.</p>
-<button id="placeOrderBtn" class="btn btn-primary full" type="submit">Place Order</button><p id="checkoutMessage" class="form-message" role="status" aria-live="polite"></p>
+<button id="placeOrderBtn" class="btn btn-primary full" type="submit">Place Order <span aria-hidden="true">→</span></button><p id="checkoutMessage" class="form-message" role="status" aria-live="polite"></p>
 </form></section><section class="panel"><h2>Order Summary</h2><div id="checkoutSummary"></div></section></div></main>
-<script src="../js/storage.js"></script><script src="../js/orders.js"></script></body></html>
+<script src="../js/storage.js"></script><script src="../js/checkout.js"></script></body></html>
