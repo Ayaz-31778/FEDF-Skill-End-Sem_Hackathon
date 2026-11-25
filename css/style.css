@@ -1249,3 +1249,27 @@ header,.site-header,.navbar{background:#263026!important;color:var(--atelier-ivo
   color: #26352b !important;
   font-weight: 900;
 }
+
+/* Order placement simulation and confirmation */
+.checkout-demo-note{font-size:11px;line-height:1.6;margin:12px 0;color:#65715f!important}
+#placeOrderBtn:disabled{opacity:.72;cursor:wait;transform:none}
+.order-success-panel{max-width:760px;margin:28px auto;padding:clamp(24px,5vw,52px);background:#fffdf7;color:#29362c;text-align:center}
+.order-success-mark{width:62px;height:62px;border-radius:50%;margin:0 auto 18px;display:grid;place-items:center;background:#dfe9d9;color:#28633e;font-size:34px;font-weight:900}
+.order-success-panel .eyebrow{justify-content:center;color:#b36f50}
+.order-success-panel h1{font:500 clamp(32px,5vw,48px) 'Playfair Display',serif;color:#29362c;margin:10px 0}
+.order-success-panel>p:not(.eyebrow){color:#596653;line-height:1.7;font-size:13px}
+.order-confirmation-id{margin:25px auto;padding:15px;background:#f0f1e8;display:flex;flex-direction:column;gap:5px;max-width:390px}
+.order-confirmation-id span,.order-confirmation-details span{font-size:9px;letter-spacing:1.3px;color:#75806f;font-weight:800}
+.order-confirmation-id strong{font-size:18px;color:#29362c;letter-spacing:.5px}
+.order-confirmation-details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;text-align:left;margin:20px 0 28px}
+.order-confirmation-details>div{padding:13px;background:#f7f5ed;display:flex;flex-direction:column;gap:5px;min-width:0}
+.order-confirmation-details strong{font-size:12px;color:#29362c;overflow-wrap:anywhere}
+.order-success-panel h2{font-size:17px;text-align:left;color:#29362c;margin:15px 0 8px}
+.order-success-panel .summary-product{display:flex;justify-content:space-between;gap:15px;text-align:left;padding:10px 0;border-bottom:1px solid #e2e3d9;color:#43523f;font-size:12px}
+.order-success-panel .summary-product strong{color:#29362c;white-space:nowrap}
+.order-success-panel .summary-total{display:flex;justify-content:space-between;padding:16px 0;border-top:1px solid #d6ddcf;color:#29362c;font-weight:800}
+.order-success-panel .summary-total strong{font-size:20px}
+.order-delivery-address{text-align:left!important;background:#f7f5ed;padding:13px;margin-top:14px}
+.order-success-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:25px}
+.order-success-actions .btn{min-width:170px}
+@media(max-width:520px){.order-confirmation-details{grid-template-columns:1fr}.order-success-panel{padding:23px 17px}.order-success-actions .btn{width:100%}}
