@@ -25,10 +25,8 @@ export function HomePage() {
     return () => window.clearInterval(timer);
   }, []);
   const clock = [Math.floor(seconds / 3600), Math.floor((seconds % 3600) / 60), seconds % 60].map(v => String(v).padStart(2, "0"));
-  const featured = categories.flatMap(category => products.filter(p => {
-    const cat = category.slug === "everyday" ? "Everyday Finds" : category.slug === "electronics" ? "Electronics" : category.name;
-    return p.category === cat && Number(p.stock) > 0;
-  }).slice(0, 2)).slice(0, 14);
+  const featured = ["Fashion", "Electronics", "Home", "Beauty", "Books", "Everyday Finds", "For Him"]
+    .flatMap(category => products.filter(p => p.category === category && Number(p.stock) > 0).slice(0, 2));
   const goSearch = event => {
     event.preventDefault();
     window.location.href = "/category.html?category=all&search=" + encodeURIComponent(search.trim());
