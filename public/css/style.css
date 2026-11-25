@@ -935,3 +935,17 @@ header,.site-header,.navbar{background:#263026!important;color:var(--atelier-ivo
 .tiny-star {
   display: none !important;
 }
+
+/* ATELIER GLOBAL DOODLE POLICY — no star or sparkle motifs anywhere in the interface. */
+.atelier-hero-copy:before,
+.atelier-catalogue:before,
+.atelier-bottom-banner:before {
+  content: none !important;
+  display: none !important;
+}
+.atelier-note:after { content: "  ·  ♡" !important; }
+.atelier-category-section:before { content: "⌁" !important; }
+.atelier-category-card:after,
+.atelier-category-card:nth-child(3n):after { content: "↗" !important; }
+.atelier-product-card:nth-child(4n+1) .atelier-product-image:after { content: "↗" !important; }
+.doodle-star, .doodle-spark, .auth-title-star, .tiny-star { display: none !important; }
