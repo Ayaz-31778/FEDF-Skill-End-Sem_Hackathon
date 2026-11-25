@@ -189,3 +189,81 @@
  .atelier-homepage .newsletter form{grid-column:auto;justify-self:stretch}
  .atelier-homepage .deal-clock-wrap{transform:none}
 }
+
+
+/* Screenshot-specific refinements: sale panel, category strip, benefit text and navigation */
+.atelier-homepage .deal-banner{
+  grid-template-columns:minmax(110px,.55fr) minmax(260px,1fr) minmax(360px,1.2fr);
+  align-items:center;
+  justify-items:center;
+  gap:28px;
+  padding:72px 7%;
+}
+.atelier-homepage .deal-doodle{justify-self:center;text-align:center}
+.atelier-homepage .deal-copy{text-align:center;display:flex;flex-direction:column;align-items:center}
+.atelier-homepage .deal-copy>p:not(.eyebrow){margin-left:auto;margin-right:auto}
+.atelier-homepage .deal-clock-wrap{justify-self:center}
+.atelier-homepage .category-photo-grid{
+  grid-template-columns:repeat(7,minmax(0,1fr));
+  gap:10px;
+}
+.atelier-homepage .category-tile{
+  min-height:154px;
+  padding:13px 12px;
+}
+.atelier-homepage .category-tile .category-photo-kicker{font-size:7px;letter-spacing:1px}
+.atelier-homepage .category-tile b{font-size:16px;margin-top:34px;line-height:1.05}
+.atelier-homepage .category-tile small{font-size:8px;line-height:1.25}
+.atelier-homepage .category-empty-slide .empty-slide-art{font-size:58px}
+.atelier-homepage .benefit-ribbon{padding:25px 5%;gap:24px}
+.atelier-homepage .benefit-ribbon>div{display:grid;grid-template-columns:34px auto;grid-template-rows:auto auto;column-gap:10px;align-items:center}
+.atelier-homepage .benefit-ribbon>div>span{grid-row:1/3;font-size:19px;width:32px;height:32px;display:grid;place-items:center;border:1px solid #7c8978;border-radius:50%}
+.atelier-homepage .benefit-ribbon strong{font-size:12px;letter-spacing:.1px}
+.atelier-homepage .benefit-ribbon small{font-size:10px}
+.atelier-homepage .category-nav{
+  display:flex;
+  flex-wrap:nowrap;
+  align-items:center;
+  justify-content:center;
+  gap:clamp(16px,2.2vw,34px);
+  white-space:nowrap;
+  overflow-x:auto;
+  scrollbar-width:none;
+  padding:15px 4%;
+}
+.atelier-homepage .category-nav::-webkit-scrollbar{display:none}
+.atelier-homepage .category-nav a{font-size:12px;line-height:1;flex:0 0 auto}
+.atelier-homepage .category-nav .nav-hot{font-size:8px}
+.atelier-homepage .guys-grid{
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  grid-auto-rows:220px;
+  gap:11px;
+}
+.atelier-homepage .guys-card-label,
+.atelier-homepage .guys-card-cta{white-space:nowrap;font-size:9px;letter-spacing:1px}
+.atelier-homepage .guys-card-title{font-size:clamp(24px,2.1vw,32px);white-space:normal}
+.atelier-homepage .guys-card-title em{white-space:nowrap}
+@media(max-width:1100px){
+  .atelier-homepage .category-photo-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .atelier-homepage .deal-banner{grid-template-columns:1fr 1.5fr}
+  .atelier-homepage .deal-clock-wrap{grid-column:1/-1}
+  .atelier-homepage .category-nav{justify-content:flex-start}
+}
+@media(max-width:900px){
+  .atelier-homepage .benefit-ribbon strong{font-size:11px}
+  .atelier-homepage .benefit-ribbon small{font-size:9px}
+}
+@media(max-width:620px){
+  .atelier-homepage .category-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .atelier-homepage .category-tile{min-height:165px}
+  .atelier-homepage .deal-banner{grid-template-columns:1fr;gap:22px;padding:48px 7%}
+  .atelier-homepage .deal-doodle{display:none}
+  .atelier-homepage .deal-copy{grid-column:1}
+  .atelier-homepage .deal-clock-wrap{grid-column:1}
+  .atelier-homepage .benefit-ribbon{grid-template-columns:1fr 1fr}
+  .atelier-homepage .category-nav{gap:18px}
+  .atelier-homepage .category-nav a{font-size:11px}
+  .atelier-homepage .guys-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:185px}
+  .atelier-homepage .guys-card-title{font-size:20px}
+  .atelier-homepage .guys-card-label,.atelier-homepage .guys-card-cta{font-size:7px}
+}
