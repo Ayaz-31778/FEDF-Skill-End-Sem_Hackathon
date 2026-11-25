@@ -333,3 +333,73 @@ header,.site-header,.navbar{background:#263026!important;color:var(--atelier-ivo
   .guys-grid{grid-template-columns:1fr 1fr;grid-template-rows:250px 170px 170px}
   .guys-fragrance{grid-column:auto;grid-row:auto}
 }
+
+/* ACCESSIBLE CONTRAST PASS — editorial sections */
+.love-notes{
+  background:#303b30!important;
+  color:#f3f0e6!important;
+}
+.love-notes .section-heading h2{color:#f3f0e6!important}
+.love-notes .section-heading h2 em{color:#d69a79!important}
+.love-notes .section-heading .eyebrow{color:#d3d9ca!important}
+.love-notes .love-doodle{color:#d69a79!important}
+.review-card,.review-card.review-featured{
+  background:#f2efe5!important;
+  color:#303b30!important;
+  border:1px solid #d5d8c9!important;
+  box-shadow:0 10px 26px #17201720;
+}
+.review-card.review-featured{background:#e1e7d9!important}
+.review-card>p{color:#303b30!important}
+.review-stars{color:#a85f43!important}
+.review-person b{color:#303b30!important}
+.review-person small{color:#596452!important}
+.review-verified{color:#596b50!important}
+.review-avatar{color:#303b30!important}
+.review-spark{color:#b96f50!important}
+.review-disclaimer{color:#d0d7c9!important}
+.manifesto{
+  background:#394638!important;
+  color:#f5f1e7!important;
+}
+.manifesto .eyebrow{color:#e1e5d9!important}
+.manifesto h2{color:#f5f1e7!important}
+.manifesto h2 em{color:#e0a080!important}
+.manifesto>p:not(.eyebrow){color:#e0e5d9!important;opacity:1!important}
+.manifesto-doodle{color:#d69a79!important;opacity:.8}
+.manifesto-scribble{color:#e0a080!important}
+.manifesto .btn-dark{background:#c18465!important;color:#202920!important}
+.manifesto .btn-dark:hover{background:#dda080!important}
+.deal-banner{
+  background:#394638!important;
+  color:#f4f0e6!important;
+}
+.deal-copy h2{color:#f4f0e6!important}
+.deal-copy h2 em{color:#e0a080!important}
+.deal-copy .eyebrow{color:#e1e5d9!important}
+.deal-copy>p:not(.eyebrow){color:#e0e5d9!important;opacity:1!important}
+.deal-copy .btn-dark{background:#c18465!important;color:#202920!important}
+.deal-doodle{color:#e0a080!important;opacity:.75}
+.deal-clock-wrap{
+  background:#f2efe5!important;
+  border-color:#d1c9b9!important;
+  color:#303b30!important;
+}
+.deal-clock-wrap>p{color:#465442!important}
+.deal-clock strong{background:#dfe6d8!important;color:#303b30!important}
+.deal-clock i{color:#a85f43!important}
+.deal-clock-wrap>small{color:#596452!important}
+.deal-spark{color:#b96f50!important}
+.deal-round-stamp{background:#c18465!important;color:#202920!important}
+.trust-strip{color:#f2efe5!important}
+.trust-strip>div{color:#f2efe5!important}
+.trust-strip>div>span{color:#e0a080!important}
+@media(max-width:700px){
+  .review-card.review-featured{transform:none}
+  .deal-banner{gap:28px}
+}
+@media(max-width:620px){
+  .deal-clock-wrap{max-width:100%;padding:27px 16px}
+  .deal-clock strong{font-size:36px;min-width:55px}
+  .deal-round-stamp{right:-12px;bottom:-22px;width:70px;height:70px;font-size:11px}
+}
