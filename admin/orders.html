@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Orders | E-Shop</title><link rel="stylesheet" href="../css/style.css"></head>
-<body>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Orders | E-Shop</title><link rel="stylesheet" href="../css/style.css"><style>
+/* Improve contrast on the admin order table without changing the store theme. */
+.admin-orders-page { color: #20291f; }
+.admin-orders-page .page-title h1 { color: #f4f2e9; }
+.admin-orders-page .panel { color: #20291f; }
+.admin-orders-page #adminOrdersTable,
+.admin-orders-page #adminOrdersTable table,
+.admin-orders-page #adminOrdersTable tbody,
+.admin-orders-page #adminOrdersTable tr,
+.admin-orders-page #adminOrdersTable td,
+.admin-orders-page #adminOrdersTable td strong { color: #20291f !important; }
+.admin-orders-page #adminOrdersTable th { color: #455044 !important; font-weight: 800; }
+.admin-orders-page #adminOrdersTable td small { color: #5b6558 !important; opacity: 1; }
+.admin-orders-page #adminOrdersTable .select-status { color: #20291f; background: #fff; font-weight: 600; border-color: #c8cfc2; }
+.admin-orders-page #adminOrdersTable .empty-table { color: #455044; }
+</style></head>
+<body class="admin-orders-page">
 <nav class="navbar admin-nav"><a class="brand" href="dashboard.html">E-Shop <span class="admin-label">ADMIN</span></a><div class="nav-links"><a href="dashboard.html">Dashboard</a><a href="products.html">Products</a><a href="users.html">Users</a><a class="active" href="orders.html">Orders</a><button id="logoutBtn" class="btn btn-danger small">Logout</button></div></nav>
 <main class="container page"><div class="page-title"><div><p class="eyebrow">ADMIN MODULE</p><h1>Order Management</h1></div></div><section class="panel"><div id="adminOrdersTable"></div></section></main>
 <script src="../js/storage.js"></script><script src="../js/admin.js"></script>
