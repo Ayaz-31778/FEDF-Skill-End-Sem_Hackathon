@@ -23,7 +23,7 @@ function getData(key, fallback=[]) {
 }
 function setData(key, value) { localStorage.setItem(key, JSON.stringify(value)); }
 function getUsers(){ return getData(STORAGE_KEYS.users, []); }
-function getProducts(){ return getData(STORAGE_KEYS.products, defaultProducts); }
+function getProducts(){ const saved=getData(STORAGE_KEYS.products, defaultProducts); const extras=window.ATELIER_DASHBOARD_PRODUCTS||[]; return [...saved,...extras.filter(p=>!saved.some(s=>String(s.id)===String(p.id)))]; }
 function getOrders(){ return getData(STORAGE_KEYS.orders, []); }
 function getCurrentUser(){ return getData(STORAGE_KEYS.currentUser, null); }
 function setCurrentUser(user){ setData(STORAGE_KEYS.currentUser, user); }
