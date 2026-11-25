@@ -1,1 +1,36 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Order Confirmed | E-Shop</title><link rel="stylesheet" href="../css/style.css"></head><body><nav class="navbar"><a class="brand" href="dashboard.html">E-Shop</a><div class="nav-links"><a href="dashboard.html">Products</a><a href="cart.html">Cart</a><a href="orders.html">Orders</a><button id="logoutBtn" class="btn btn-danger small">Logout</button></div></nav><main class="container page"><div id="orderSuccess"></div></main><script src="../js/storage.js"></script><script src="../js/orders.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#29362c">
+  <title>Order Confirmed | Atelier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/order-success.css">
+</head>
+<body class="order-confirmation-page">
+  <nav class="navbar">
+    <a class="brand" href="dashboard.html">atelier<span style="color:#c78364">.</span></a>
+    <div class="nav-links">
+      <a href="dashboard.html">Products</a>
+      <a href="cart.html">Bag</a>
+      <a href="orders.html">My orders</a>
+      <button id="logoutBtn" class="btn btn-danger small">Sign out</button>
+    </div>
+  </nav>
+  <main class="order-confirmation-main">
+    <div id="orderSuccess" aria-live="polite">
+      <section class="confirmation-card confirmation-not-found">
+        <p class="confirmation-kicker">ATELIER · ORDER DESK</p>
+        <h1>Preparing your confirmation…</h1>
+        <p>Your order details are being loaded.</p>
+      </section>
+    </div>
+  </main>
+  <script src="../js/storage.js"></script>
+  <script src="../js/order-success.js"></script>
+</body>
+</html>
